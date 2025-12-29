@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pasteleriamiperla.online/sitemap.xml
+Sitemap: https://www.pasteleriamiperla.online/sitemap.xml
