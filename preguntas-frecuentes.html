@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preguntas frecuentes sobre nuestros productos y servicios - Pastelería Mi Perla">
+    <meta name="robots" content="index, follow">
+    <title>Preguntas Frecuentes - Mi Perla Pastelería</title>
+      <!-- PNG -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-pasteleria-miperla-chiclayo.png">
+     <!-- Apple -->
+    <link rel="canonical" href="https://pasteleriamiperla.online/preguntas-frecuentes">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-pasteleria-miperla.png">
+    <link rel="preload" as="image" href="images/logo-pasteleria-miperla-chiclayo.jpg">
+    <link rel="preload" href="/css/frecuentes.css" as="style">
+    <link rel="stylesheet" href="/css/frecuentes.css" media="print" onload="this.media='all'">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload"href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" 
+    as="style">
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" 
+  media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+/* ===========================
+   Variables y Reset
+   =========================== */
+:root {
+    --primary-color: #C41E3A; /* Dorado */
+    --secondary-color: #22c4e0; /* Rojo/Rosado */
+    --auxiliar-color:#e0b506; /* Rojo/Rosado */
+    --dark-color: #2C1810; /* Marrón oscuro */
+    --light-color: #FFF5E6; /* Crema claro */
+    --white: #FFFFFF;
+    --gray: #666666;
+    --light-gray: #F5F5F5;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===========================
+   Header y Navegación
+   =========================== */
+.header {
+    background: var(--white);
+    box-shadow: 0 2px 10px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--dark-color);
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--primary-color);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--dark-color);
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+/* Animación del menú hamburguesa a X */
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+.page-header {
+    background: linear-gradient(
+        to right,
+        var(--primary-color) 0%,
+        var(--primary-color) 40%,
+        var(--secondary-color) 60%,
+        var(--secondary-color) 100%
+    );
+    color: var(--white);
+    padding: 100px 0 60px;
+    text-align: center;
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--white);
+        flex-direction: column;
+        padding: 2rem;
+        transition: var(--transition);
+        box-shadow: 0 5px 15px var(--shadow);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .about-content,
+    .local-content,
+    .pedidos-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons,
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .local-content.reverse {
+        direction: ltr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .products-grid,
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                         <img src="images/logo-pasteleria-miperla-chiclayo.jpg" alt="logo de pasteleria mi perla en chicalyo">
+                         <span> Pasteleria Mi Perla</span>
+                    </a>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="locales.html">Locales y Horarios</a></li>
+                    <li><a href="cobertura.html">Cobertura</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Preguntas Frecuentes</h1>
+            <p>Encuentra respuestas a las preguntas más comunes</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-intro">
+                <h2>¿Tienes alguna duda?</h2>
+                <p>Aquí encontrarás las respuestas a las preguntas más frecuentes sobre nuestros productos y servicios</p>
+            </div>
+
+            <!-- Pedidos y Entregas -->
+            <div class="faq-category">
+                <h3 class="faq-category-title">
+                    <i class="fas fa-shopping-cart"></i>
+                    Pedidos y Entregas
+                </h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Cómo puedo hacer un pedido?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Puedes hacer tu pedido de tres formas:</p>
+                        <ul>
+                            <li><strong>WhatsApp:</strong> Contáctanos directamente a cualquiera de nuestros números</li>
+                            <li><strong>Visita en tienda:</strong> Acércate a cualquiera de nuestras 3 sucursales</li>
+                            <li><strong>Llamada telefónica:</strong> Llama a cualquiera de nuestros locales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Con cuánta anticipación debo hacer mi pedido?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Recomendamos hacer los pedidos con la siguiente anticipación:</p>
+                        <ul>
+                            <li><strong>Tortas personalizadas:</strong> Mínimo 48 horas de anticipación</li>
+                            <li><strong>Bocaditos para eventos:</strong> 48-72 horas de anticipación</li>
+                            <li><strong>Cupcakes personalizados:</strong> 24-48 horas de anticipación</li>
+                            <li><strong>Productos estándar:</strong> Mismo día (sujeto a disponibilidad)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Realizan entregas a domicilio?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, realizamos delivery en toda la ciudad de Chiclayo y distritos cercanos. El costo de envío varía según la zona de entrega. Consulta nuestra página de <a href="cobertura.html">Cobertura</a> para más detalles.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Cuál es el horario de entrega?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Realizamos entregas de lunes a domingo de 10:00 AM a 6:00 PM. Puedes coordinar la hora exacta de entrega al momento de hacer tu pedido.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productos -->
+            <div class="faq-category">
+                <h3 class="faq-category-title">
+                    <i class="fas fa-birthday-cake"></i>
+                    Sobre Nuestros Productos
+                </h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Puedo personalizar mi torta con cualquier diseño?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>¡Sí! Nos especializamos en tortas personalizadas. Puedes enviarnos una imagen de referencia o describirnos tu idea, y nuestros pasteleros la harán realidad. Trabajamos con temas infantiles, corporativos, bodas, y cualquier ocasión especial.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Qué sabores de torta tienen disponibles?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ofrecemos una amplia variedad de sabores:</p>
+                        <ul>
+                            <li>Tres Leches (nuestra especialidad)</li>
+                            <li>Chocolate</li>
+                            <li>Vainilla</li>
+                            <li>Red Velvet</li>
+                            <li>Selva Negra</li>
+                            <li>Torta de Frutas</li>
+                            <li>Zanahoria</li>
+                            <li>Y más sabores personalizados</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Los bocaditos pueden ser solo dulces, solo salados o mixtos?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Puedes elegir la combinación que prefieras. Ofrecemos:</p>
+                        <ul>
+                            <li>Solo bocaditos dulces</li>
+                            <li>Solo bocaditos salados</li>
+                            <li>Mixtos (mitad dulces, mitad salados)</li>
+                            <li>Proporciones personalizadas según tu preferencia</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Tienen opciones sin gluten o veganas?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, podemos preparar productos especiales bajo pedido. Es importante que nos informes sobre cualquier restricción alimentaria al momento de hacer tu pedido para garantizar la preparación adecuada.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagos -->
+            <div class="faq-category">
+                <h3 class="faq-category-title">
+                    <i class="fas fa-credit-card"></i>
+                    Pagos y Facturación
+                </h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Qué métodos de pago aceptan?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Aceptamos los siguientes métodos de pago:</p>
+                        <ul>
+                            <li>Efectivo (en tienda o contra entrega)</li>
+                            <li>Transferencia bancaria</li>
+                            <li>Yape</li>
+                            <li>Plin</li>
+                            <li>Tarjetas de débito y crédito (en tienda)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Debo pagar un adelanto?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Para pedidos personalizados o de eventos grandes, solicitamos un adelanto del 50% para confirmar el pedido. El saldo restante se paga al momento de la entrega o recojo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Emiten factura o boleta?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, emitimos tanto boletas como facturas. Solo debes solicitarlo al momento de hacer tu pedido y proporcionar tus datos correspondientes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eventos Especiales -->
+            <div class="faq-category">
+                <h3 class="faq-category-title">
+                    <i class="fas fa-calendar-check"></i>
+                    Eventos y Pedidos Especiales
+                </h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Atienden eventos corporativos?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>¡Por supuesto! Atendemos eventos corporativos como reuniones, inauguraciones, aniversarios de empresas, y más. Ofrecemos precios especiales para pedidos al por mayor y podemos personalizar los productos con el logo de tu empresa.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Pueden hacer tortas de varios pisos?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, realizamos tortas de varios pisos para bodas, quinceañeros y eventos especiales. Estos pedidos requieren mayor anticipación (mínimo 1 semana) debido a su complejidad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Hacen pruebas de sabor?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Para eventos grandes como bodas o eventos corporativos importantes, podemos coordinar una cata previa. Contáctanos para agendar una cita.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Otros -->
+            <div class="faq-category">
+                <h3 class="faq-category-title">
+                    <i class="fas fa-question-circle"></i>
+                    Otras Preguntas
+                </h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Cómo debo conservar mi torta?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Recomendamos mantener la torta refrigerada hasta el momento de servir. Sácala del refrigerador 30 minutos antes de consumir para que alcance temperatura ambiente y disfrutes mejor su sabor.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Puedo cancelar o modificar mi pedido?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Las modificaciones deben solicitarse con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas de anticipación no tienen devolución del adelanto, ya que los ingredientes ya han sido preparados.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Tienen productos disponibles para compra inmediata?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, en nuestras tiendas siempre tenemos productos disponibles como tortas de vitrina, bocaditos del día, y otros postres que puedes llevar inmediatamente sin necesidad de pedido previo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿No encontraste tu respuesta?</h2>
+                <p>Contáctanos por WhatsApp y con gusto te ayudaremos</p>
+                <a href="https://wa.me/51985556216?text=Hola,%20tengo%20una%20consulta" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Escríbenos al WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                         <img src="images/logo-pasteleria-miperla-chiclayo.webp" alt="Pasteleria fina mi perla en chiclayo">
+                        <h3>Mi Perla</h3>
+                    </div>
+                    <p class="footer-description">Líder en Pastelería Fina</p>
+                     <div class="social-links">
+                        <a href="https://www.facebook.com/tortamiperla" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/pasteleriamiperla/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/51985556216" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Center</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/51985556216">985 556 216</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/51939665548">939 665 548</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/51914906183">914 906 183</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:pasteleriamiperla@gmail.com">pasteleriamiperla@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Nosotros</h4>
+                    <ul class="footer-links">
+                        <li><a href="locales.html">Nuestras Tiendas</a></li>
+                        <li><a href="cobertura.html">Cobertura</a></li>
+                        <li><a href="productos.html">Nuestros Productos</a></li>
+                    </ul>
+                      <div class="footer-hours">
+                        <h5>Horario de Atención</h5>
+                        <p>Lunes a Jueves de 7am a 10pm</p>
+                        <p>Viernes- Sábado  7am - 9pm</p>
+                        <p>Domingo de 7am-8pm</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Servicio al Cliente</h4>
+                    <ul class="footer-links">
+                        <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                        <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pastelería Mi Perla. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/51985556216" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/faq.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

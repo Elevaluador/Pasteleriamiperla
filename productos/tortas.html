@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tortas personalizadas para cada momento especial. Diseños únicos para cumpleaños, bodas, bautizos, temáticas infantiles y mas. ¡Cotiza por WhatsApp!">
+    <meta name="keywords" content="tortas personalizadas en chiclayo, tortas de cumpleaños, tortas de boda, pasteleria fina chiclayo, tortas tres leches">
+    <meta name="robots" content="index, follow">
+    <title>Tortas Personalizadas en Chiclayo | Pastelería Mi Perla</title>
+      <!-- PNG -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-pasteleria-miperla-chiclayo.png">
+     <!-- Apple -->
+    <link rel="canonical" href="https://pasteleriamiperla.online/tortas">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-pasteleria-miperla.png">
+    <link rel="preload" as="image" href="/images/logo-pasteleria-miperla-chiclayo.jpg">
+    <link rel="preload" href="/css/tortas.css" as="style">
+    <link rel="stylesheet" href="/css/tortas.css" media="print" onload="this.media='all'">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload"href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" 
+    as="style">
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" 
+  media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+/* ===========================
+   Variables y Reset
+   =========================== */
+:root {
+    --primary-color: #C41E3A; /* Dorado */
+    --secondary-color: #22c4e0; /* Rojo/Rosado */
+    --auxiliar-color:#e0b506; /* Rojo/Rosado */
+    --dark-color: #2C1810; /* Marrón oscuro */
+    --light-color: #FFF5E6; /* Crema claro */
+    --white: #FFFFFF;
+    --gray: #666666;
+    --light-gray: #F5F5F5;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===========================
+   Header y Navegación
+   =========================== */
+.header {
+    background: var(--white);
+    box-shadow: 0 2px 10px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--dark-color);
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--primary-color);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--dark-color);
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+/* Animación del menú hamburguesa a X */
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+.page-header {
+    background: linear-gradient(
+        to right,
+        var(--primary-color) 0%,
+        var(--primary-color) 40%,
+        var(--secondary-color) 60%,
+        var(--secondary-color) 100%
+    );
+    color: var(--white);
+    padding: 100px 0 60px;
+    text-align: center;
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--white);
+        flex-direction: column;
+        padding: 2rem;
+        transition: var(--transition);
+        box-shadow: 0 5px 15px var(--shadow);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .about-content,
+    .local-content,
+    .pedidos-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons,
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .local-content.reverse {
+        direction: ltr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .products-grid,
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1rem;
+    }
+}
+    </style>
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="/index.html">
+                       <img src="/images/logo-pasteleria-miperla-chiclayo.jpg" alt="logo de pasteleria mi perla en chicalyo">
+                    <span> Pasteleria Mi Perla</span>
+                    </a>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/locales.html">Locales y Horarios</a></li>
+                    <li><a href="/cobertura.html">Cobertura</a></li>
+                    <li><a href="/productos.html" class="active">Productos</a></li>
+                    <li><a href="/index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Tortas Personalizadas</h1>
+            <p>Diseños únicos para cada ocasión especial</p>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> / <a href="productos.html">Productos</a> / <span>Tortas Personalizadas</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Descripción de Categoría -->
+    <section class="categoria-descripcion">
+        <div class="container">
+            <div class="descripcion-content">
+                <div class="descripcion-text">
+                    <h2>Las Mejores Tortas Personalizadas en Chiclayo</h2>
+                    <p>En <strong>Mi Perla</strong>, nos especializamos en crear <strong>tortas personalizadas</strong> únicas que hacen de cada celebración un momento inolvidable. Nuestros pasteleros expertos trabajan con dedicación para transformar tus ideas en deliciosas realidades.</p>
+                    <p>Ofrecemos una amplia variedad de diseños y sabores, desde elegantes tortas de matrimonio hasta divertidas tortas infantiles temáticas. Cada torta es elaborada con ingredientes de primera calidad y decorada con esmero.</p>
+                    <div class="caracteristicas-categoria">
+                        <div class="caracteristica">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Diseños 100% personalizados</span>
+                        </div>
+                        <div class="caracteristica">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Ingredientes premium</span>
+                        </div>
+                        <div class="caracteristica">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Variedad de sabores</span>
+                        </div>
+                        <div class="caracteristica">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Entrega puntual garantizada</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="descripcion-image">
+                    <img src="/images/categoria-tortas-personalizadas.jpg" alt="Tortas Personalizadas en Chiclayo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Productos -->
+    <section class="galeria-productos">
+        <div class="container">
+            <h2 class="section-title">Nuestras Tortas</h2>
+            <p class="section-subtitle">Descubre nuestra variedad de diseños y sabores</p>
+
+            <div class="productos-gallery">
+                <!-- Torta 1 -->
+                <div class="producto-item">
+                    <div class="producto-imagen">
+                        <img src="/images/tortas/torta-cumpleaños-tematica-pasteleria-miperla.jpg" alt="Torta de Cumpleaños Temática">
+                        <div class="producto-overlay">
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20de%20Cumpleaños%20Temática" class="btn-ver-mas" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Torta de Cumpleaños Temática</h3>
+                        <p>Diseño personalizado según tu tema favorito. Ideal para niños y adultos.</p>
+                    </div>
+                </div>
+
+                <!-- Torta 2 -->
+                <div class="producto-item">
+                    <div class="producto-imagen">
+                        <img src="/images/tortas/torta-matrimonio-pasteleria-miperla.jpg" alt="Torta de Matrimonio Elegante">
+                        <div class="producto-overlay">
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20de%20Matrimonio%20Elegante" class="btn-ver-mas" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Torta de Matrimonio Elegante</h3>
+                        <p>Hermosos diseños de varios pisos para bodas. Elegancia y sabor en cada detalle.</p>
+                    </div>
+                </div>
+
+                <!-- Torta 3 -->
+                <div class="producto-item">
+                    <div class="producto-imagen">
+                       <img src="/images/tortas/torta-infantil-pasteleria-miperla.jpg"alt="Torta Infantil Creativa">
+                        <div class="producto-overlay">
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Infantil%20Creativa" class="btn-ver-mas" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Torta Infantil Creativa</h3>
+                        <p>Personajes favoritos de tus hijos. Diseños divertidos y coloridos.</p>
+                    </div>
+                </div>
+
+                <!-- Torta 4 -->
+                <div class="producto-item">
+                    <div class="producto-imagen">
+                        <img src="/images/tortas/torta-sanvalentin-pasteleria-miperla.jpg" alt="Torta san valentin de pasteleria de chiclayo">
+                        <div class="producto-overlay">
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Corporativa" class="btn-ver-mas" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Torta De san Valentin</h3>
+                        <p>Diseños creativos para el dia del amor y la amistad.Ideales para dedicarle un mensaje del corazon.</p>
+                    </div>
+                </div>
+
+                <!-- Torta 5 -->
+                <div class="producto-item">
+                    <div class="producto-imagen">
+                        <img src="/images/tortas/torta-niñas-pasteleria-miperla.jpg" alt="Torta para cumpleañs de niñas">
+                        <div class="producto-overlay">
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Tres%20Leches%20Premium" class="btn-ver-mas" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Torta para Niñas</h3>
+                        <p>Tortas ideales para celebrar el cumpleaños de tu pequeña, con el estilo que mas le guste.</p>
+                    </div>
+                </div>
+
+                <!-- Torta 6 -->
+                <div class="producto-item">
+                    <div class="producto-imagen">
+                        <img src="/images/tortas/torta-diamadre-pasteleria-miperla.jpg" alt="Torta del dia de la madre">
+                        <div class="producto-overlay">
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20de%20Chocolate" class="btn-ver-mas" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Torta del dia de la Madre</h3>
+                        <p>Torta para celabrar el dia de la madre e ingreirla por su esfuerzo diario. Con la tematica y la dedicatoria, que mas te enamore</p>
+                    </div>
+                </div>
+
+                <!-- Torta 7 -->
+                <div class="producto-item">
+                    <div class="producto-imagen">
+                        <img src="/images/tortas/torta-selva-negra-pasteleria-miperla.jpg" alt="Torta Selva Negra de pasteleria en chiclayo">
+                        <div class="producto-overlay">
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Selva%20Negra" class="btn-ver-mas" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Torta Selva Negra</h3>
+                        <p>Tradicional torta con cerezas y crema. Sabor clásico y elegante.</p>
+                    </div>
+                </div>
+
+                <!-- Torta 8 -->
+                <div class="producto-item">
+                    <div class="producto-imagen">
+                        <img src="/images/tortas/torta-dia-padre-pasteleria-miperla.jpg" alt="Torta del dia de papa">
+                        <div class="producto-overlay">
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20de%20Frutas" class="btn-ver-mas" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Torta del dia del padre</h3>
+                        <p>Torta para agradecerle a los padres, por cuidar que no te falta nada e incluso, ayudarte a cumplir tus caprichos.</p>
+                    </div>
+                </div>
+
+                <!-- Torta 9 -->
+                <div class="producto-item">
+                    <div class="producto-imagen">
+                        <img src="/images/tortas/torta-chocolate-pasteleria-miperla.jpg" alt="Torta de chocolate de pasteleria en chiclayo">
+                        <div class="producto-overlay">
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Red%20Velvet" class="btn-ver-mas" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Torta de Chocolate</h3>
+                        <p>Intensa torta de chocolate con ganache. Para los verdaderos amantes del chocolate</p>
+                    </div>
+                </div>
+
+                <!-- Torta 10 -->
+                <div class="producto-item">
+                    <div class="producto-imagen">
+                        <img src="/images/tortas/torta-sporting-cristal-pasteleria-miperla.jpg" alt="Torta del sporting  cristal en chiclayo">
+                        <div class="producto-overlay">
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Personalizada%203D" class="btn-ver-mas" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Torta Deportiva del Sporting Cristal</h3>
+                        <p>Diseño deportivo para amanates del futbol y en especial del equipo sporting cristal</p>
+                    </div>
+                </div>
+                     <!-- Torta 11 -->
+                <div class="producto-item">
+                    <div class="producto-imagen">
+                        <img src="/images/tortas/torta-bautizo-pasteleria-miperla.jpg" alt="Torta de bautizo en chiclayo">
+                        <div class="producto-overlay">
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Personalizada%203D" class="btn-ver-mas" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Torta de bautizo</h3>
+                        <p>Diseño para celebrar el bautizo de cualquiera de tus hijos. Y que de la
+                             bienvenida a Dios, como buen cristiano.</p>
+                    </div>
+                </div>
+                     <!-- Torta 12 -->
+                <div class="producto-item">
+                    <div class="producto-imagen">
+                        <img src="/images/tortas/torta-deportiva-alianza.jpg" alt="Torta deportiva de la alianza en chiclayo">
+                        <div class="producto-overlay">
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Personalizada%203D" class="btn-ver-mas" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Torta Deportiva de la alianza</h3>
+                        <p>Diseño deportivo para amanates del futbol y en especial del equipo de la alianza</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sabores Disponibles -->
+    <section class="sabores-section">
+        <div class="container">
+            <h2>Sabores Disponibles</h2>
+            <div class="sabores-grid">
+                <div class="sabor-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h4>Tres Leches</h4>
+                </div>
+                <div class="sabor-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h4>Chocolate</h4>
+                </div>
+                <div class="sabor-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h4>Vainilla</h4>
+                </div>
+                <div class="sabor-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h4>Selva Negra</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Otras Categorías -->
+    <section class="otras-categorias" hidden>
+        <div class="container">
+            <h2>Explora Otras Categorías</h2>
+            <div class="categorias-relacionadas">
+                <a href="bocaditos.html" class="categoria-card-small">
+                    <img src="images/categoria-bocaditos.jpg" alt="Bocaditos">
+                    <h3>Bocaditos</h3>
+                    <p>Dulces y salados para eventos</p>
+                </a>
+                <a href="cupcakes.html" class="categoria-card-small">
+                    <img src="images/categoria-cupcakes.jpg" alt="Cupcakes">
+                    <h3>Cupcakes Personalizados</h3>
+                    <p>Diseños creativos y deliciosos</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para ordenar tu torta personalizada?</h2>
+                <p>Contáctanos por WhatsApp y te ayudaremos a crear la torta perfecta</p>
+                <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20ordenar%20una%20torta%20personalizada" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Hacer Pedido por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="/images/logo-pasteleria-miperla-chiclayo.webp" alt="Pasteleria fina mi perla en chiclayo">
+                        <h3>Mi Perla</h3>
+                    </div>
+                    <p class="footer-description">Líder en Pastelería Fina</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/tortamiperla" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/pasteleriamiperla/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/51985556216" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Center</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/51985556216">985 556 216</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/51939665548">939 665 548</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/51914906183">914 906 183</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:pasteleriamiperla@gmail.com">pasteleriamiperla@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Nosotros</h4>
+                    <ul class="footer-links">
+                        <li><a href="/locales.html">Nuestras Tiendas</a></li>
+                        <li><a href="/cobertura.html">Cobertura</a></li>
+                        <li><a href="/productos.html">Nuestros Productos</a></li>
+                    </ul>
+                      <div class="footer-hours">
+                        <h5>Horario de Atención</h5>
+                        <p>Lunes a Jueves de 7am a 10pm</p>
+                        <p>Viernes- Sábado  7am - 9pm</p>
+                        <p>Domingo de 7am-8pm</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Servicio al Cliente</h4>
+                    <ul class="footer-links">
+                        <li><a href="/preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                        <li><a href="/politica-cookies.html">Política de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pastelería Mi Perla. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/51985556216" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

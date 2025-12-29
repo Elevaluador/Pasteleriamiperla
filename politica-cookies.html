@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Cookies - Pastelería Mi Perla">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Política de Cookies - Mi Perla Pastelería</title>
+      <!-- PNG -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-pasteleria-miperla-chiclayo.png">
+     <!-- Apple -->
+    <link rel="canonical" href="https://pasteleriamiperla.online/politica-cookies">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-pasteleria-miperla.png">
+    <link rel="preload" as="image" href="images/logo-pasteleria-miperla-chiclayo.jpg">
+    <link rel="preload" href="/css/cookies.css" as="style">
+    <link rel="stylesheet" href="/css/cookies.css" media="print" onload="this.media='all'">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload"href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" 
+    as="style">
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" 
+  media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+/* ===========================
+   Variables y Reset
+   =========================== */
+:root {
+    --primary-color: #C41E3A; /* Dorado */
+    --secondary-color: #22c4e0; /* Rojo/Rosado */
+    --auxiliar-color:#e0b506; /* Rojo/Rosado */
+    --dark-color: #2C1810; /* Marrón oscuro */
+    --light-color: #FFF5E6; /* Crema claro */
+    --white: #FFFFFF;
+    --gray: #666666;
+    --light-gray: #F5F5F5;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===========================
+   Header y Navegación
+   =========================== */
+.header {
+    background: var(--white);
+    box-shadow: 0 2px 10px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--dark-color);
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--primary-color);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--dark-color);
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+/* Animación del menú hamburguesa a X */
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+.page-header {
+    background: linear-gradient(
+        to right,
+        var(--primary-color) 0%,
+        var(--primary-color) 40%,
+        var(--secondary-color) 60%,
+        var(--secondary-color) 100%
+    );
+    color: var(--white);
+    padding: 100px 0 60px;
+    text-align: center;
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--white);
+        flex-direction: column;
+        padding: 2rem;
+        transition: var(--transition);
+        box-shadow: 0 5px 15px var(--shadow);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .about-content,
+    .local-content,
+    .pedidos-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons,
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .local-content.reverse {
+        direction: ltr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .products-grid,
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                         <img src="images/logo-pasteleria-miperla-chiclayo.jpg" alt="logo de pasteleria mi perla en chicalyo">
+                         <span> Pasteleria Mi Perla</span>
+                    </a>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="locales.html">Locales y Horarios</a></li>
+                    <li><a href="cobertura.html">Cobertura</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Política de Cookies</h1>
+            <p>Información sobre el uso de cookies en nuestro sitio web</p>
+        </div>
+    </section>
+
+    <!-- Política Content -->
+    <section class="politica-section">
+        <div class="container">
+            <div class="politica-content">
+                <div class="politica-intro">
+                    <p class="fecha-actualizacion">Última actualización: 28 de diciembre de 2025</p>
+                    <p>En Pastelería Mi Perla, utilizamos cookies y tecnologías similares para mejorar tu experiencia en nuestro sitio web. Esta política explica qué son las cookies, cómo las usamos y cómo puedes controlarlas.</p>
+                </div>
+
+                <div class="politica-section-content">
+                    <h2><i class="fas fa-cookie-bite"></i> ¿Qué son las cookies?</h2>
+                    <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo (ordenador, tablet o móvil) cuando visitas un sitio web. Estas cookies permiten que el sitio web recuerde tus acciones y preferencias durante un período de tiempo, por lo que no tienes que volver a configurarlas cada vez que regresas al sitio.</p>
+                </div>
+
+                <div class="politica-section-content">
+                    <h2><i class="fas fa-list-check"></i> ¿Qué tipos de cookies utilizamos?</h2>
+                    
+                    <h3>1. Cookies Esenciales</h3>
+                    <p>Estas cookies son necesarias para que el sitio web funcione correctamente. Sin ellas, algunos servicios no estarán disponibles.</p>
+                    <div class="cookie-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Cookie</th>
+                                    <th>Propósito</th>
+                                    <th>Duración</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>session_id</td>
+                                    <td>Mantiene tu sesión activa mientras navegas</td>
+                                    <td>Sesión</td>
+                                </tr>
+                                <tr>
+                                    <td>cookie_consent</td>
+                                    <td>Recuerda tus preferencias de cookies</td>
+                                    <td>1 año</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>2. Cookies de Funcionalidad</h3>
+                    <p>Estas cookies nos permiten recordar tus preferencias y hacer que tu experiencia sea más personalizada.</p>
+                    <div class="cookie-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Cookie</th>
+                                    <th>Propósito</th>
+                                    <th>Duración</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>language_preference</td>
+                                    <td>Guarda tu idioma preferido</td>
+                                    <td>1 año</td>
+                                </tr>
+                                <tr>
+                                    <td>location_preference</td>
+                                    <td>Recuerda tu sucursal más cercana</td>
+                                    <td>6 meses</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>3. Cookies Analíticas</h3>
+                    <p>Estas cookies nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web, recopilando información de forma anónima.</p>
+                    <div class="cookie-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Cookie</th>
+                                    <th>Propósito</th>
+                                    <th>Duración</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>_ga</td>
+                                    <td>Google Analytics - Distingue usuarios</td>
+                                    <td>2 años</td>
+                                </tr>
+                                <tr>
+                                    <td>_gid</td>
+                                    <td>Google Analytics - Distingue usuarios</td>
+                                    <td>24 horas</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="politica-section-content">
+                    <h2><i class="fas fa-bullseye"></i> ¿Para qué utilizamos las cookies?</h2>
+                    <ul class="politica-list">
+                        <li><i class="fas fa-check-circle"></i> <strong>Funcionalidad del sitio:</strong> Para que el sitio web funcione correctamente y puedas navegar sin problemas.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Recordar tus preferencias:</strong> Como tu sucursal más cercana o productos favoritos.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Mejorar nuestros servicios:</strong> Analizando cómo usas el sitio para mejorarlo continuamente.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Seguridad:</strong> Protegiendo tu información y nuestro sitio de actividades fraudulentas.</li>
+                    </ul>
+                </div>
+
+                <div class="politica-section-content">
+                    <h2><i class="fas fa-shield-alt"></i> Cookies de terceros</h2>
+                    <p>Algunos servicios de terceros que utilizamos también pueden colocar cookies en tu dispositivo:</p>
+                    
+                    <h3>Google Analytics</h3>
+                    <p>Utilizamos Google Analytics para entender cómo los usuarios interactúan con nuestro sitio. Google Analytics utiliza cookies para recopilar información de forma anónima y generar informes sobre el uso del sitio web.</p>
+                    <p>Más información: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad de Google</a></p>
+
+                    <h3>Redes Sociales</h3>
+                    <p>Si compartes contenido a través de botones de redes sociales (Facebook, Instagram, WhatsApp), estas plataformas pueden establecer cookies en tu dispositivo. Estas cookies están controladas por las respectivas redes sociales.</p>
+                </div>
+
+                <div class="politica-section-content">
+                    <h2><i class="fas fa-sliders-h"></i> ¿Cómo puedes controlar las cookies?</h2>
+                    
+                    <h3>En tu navegador</h3>
+                    <p>La mayoría de los navegadores aceptan cookies automáticamente, pero puedes modificar la configuración de tu navegador para rechazarlas si lo prefieres:</p>
+                    
+                    <div class="browser-controls">
+                        <div class="browser-item">
+                            <i class="fab fa-chrome"></i>
+                            <h4>Google Chrome</h4>
+                            <p>Configuración → Privacidad y seguridad → Cookies y otros datos de sitios</p>
+                        </div>
+                        <div class="browser-item">
+                            <i class="fab fa-firefox-browser"></i>
+                            <h4>Mozilla Firefox</h4>
+                            <p>Opciones → Privacidad y seguridad → Cookies y datos del sitio</p>
+                        </div>
+                        <div class="browser-item">
+                            <i class="fab fa-safari"></i>
+                            <h4>Safari</h4>
+                            <p>Preferencias → Privacidad → Gestionar datos del sitio web</p>
+                        </div>
+                        <div class="browser-item">
+                            <i class="fab fa-edge"></i>
+                            <h4>Microsoft Edge</h4>
+                            <p>Configuración → Privacidad, búsqueda y servicios → Cookies</p>
+                        </div>
+                    </div>
+
+                    <div class="warning-box">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p><strong>Importante:</strong> Ten en cuenta que deshabilitar las cookies puede afectar la funcionalidad de nuestro sitio web y limitar tu experiencia de navegación.</p>
+                    </div>
+                </div>
+
+                <div class="politica-section-content">
+                    <h2><i class="fas fa-user-shield"></i> Tu privacidad</h2>
+                    <p>En Pastelería Mi Perla, respetamos tu privacidad. Las cookies que utilizamos no recopilan información personal identificable sin tu consentimiento explícito. Nunca vendemos ni compartimos tu información personal con terceros para fines de marketing.</p>
+                </div>
+
+                <div class="politica-section-content">
+                    <h2><i class="fas fa-sync-alt"></i> Actualizaciones de esta política</h2>
+                    <p>Podemos actualizar esta Política de Cookies periódicamente para reflejar cambios en las cookies que utilizamos o por otras razones operativas, legales o regulatorias. Te recomendamos revisar esta página regularmente para estar informado sobre cómo utilizamos las cookies.</p>
+                </div>
+
+                <div class="politica-section-content">
+                    <h2><i class="fas fa-envelope"></i> Contacto</h2>
+                    <p>Si tienes preguntas sobre nuestra Política de Cookies o sobre cómo manejamos tus datos, no dudes en contactarnos:</p>
+                    
+                    <div class="contact-info-box">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong>
+                                <p><a href="mailto:pasteleriamiperla@gmail.com">pasteleriamiperla@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp:</strong>
+                                <p><a href="https://wa.me/51985556216">985 556 216</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Dirección:</strong>
+                                <p>Av. Pedro Ruiz 890, Chiclayo - Lambayeque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consent-section">
+                    <h2><i class="fas fa-check-circle"></i> Consentimiento</h2>
+                    <p>Al utilizar nuestro sitio web, aceptas el uso de cookies de acuerdo con esta Política de Cookies. Si no estás de acuerdo con el uso de cookies, puedes deshabilitarlas en la configuración de tu navegador, aunque esto puede afectar tu experiencia en el sitio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                         <img src="images/logo-pasteleria-miperla-chiclayo.webp" alt="Pasteleria fina mi perla en chiclayo">
+                        <h3>Mi Perla</h3>
+                    </div>
+                    <p class="footer-description">Líder en Pastelería Fina</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/tortamiperla" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/pasteleriamiperla/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/51985556216" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Center</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/51985556216">985 556 216</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/51939665548">939 665 548</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/51914906183">914 906 183</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:pasteleriamiperla@gmail.com">pasteleriamiperla@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Nosotros</h4>
+                    <ul class="footer-links">
+                        <li><a href="locales.html">Nuestras Tiendas</a></li>
+                        <li><a href="cobertura.html">Cobertura</a></li>
+                        <li><a href="productos.html">Nuestros Productos</a></li>
+                    </ul>
+                     <div class="footer-hours">
+                        <h5>Horario de Atención</h5>
+                        <p>Lunes a Jueves de 7am a 10pm</p>
+                        <p>Viernes- Sábado  7am - 9pm</p>
+                        <p>Domingo de 7am-8pm</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Servicio al Cliente</h4>
+                    <ul class="footer-links">
+                        <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                        <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pastelería Mi Perla. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/51985556216" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

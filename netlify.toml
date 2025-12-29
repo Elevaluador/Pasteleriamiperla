@@ -1,0 +1,82 @@
+[build]
+  publish = "."
+  command = "echo 'No build command needed'"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+#paginas Normales
+[[redirects]]
+  from = "/cobertura.html"
+  to = "/cobertura"
+  status = 301
+  force = true
+
+  [[redirects]]
+  from = "/locales.html"
+  to = "/locales"
+  status = 301
+  force = true
+
+   [[redirects]]
+  from = "/productos.html"
+  to = "/productos-pasteleria-miperla"
+  status = 301
+  force = true
+
+# paginas de servicios
+  [[redirects]]
+  from = "/politica-cookies.html"
+  to = "/politica-cookies"
+  status = 301
+  force = true
+
+   [[redirects]]
+  from = "/preguntas-frecuentes.html"
+  to = "/preguntas-frecuentes"
+  status = 301
+  force = true
+
+# categorias de productos
+[[redirects]]
+  from = "/productos/tortas.html"
+  to = "/tortas"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/productos/bocaditos.html"
+  to = "/bocaditos"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/productos/cupcakes.html"
+  to = "/cupcakes"
+  status = 301
+  force = true

@@ -1,0 +1,267 @@
+/* ===========================
+   FAQ Page
+   =========================== */
+.faq-section {
+    background: var(--white);
+    padding: 80px 0;
+}
+
+.faq-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.faq-intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.faq-intro p {
+    font-size: 1.1rem;
+    color: var(--gray);
+}
+
+.faq-category {
+    margin-bottom: 3rem;
+}
+
+.faq-category-title {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.faq-category-title i {
+    color: var(--primary-color);
+}
+
+.faq-item {
+    background: var(--white);
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--light-gray);
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    background: #E8E8E8;
+}
+
+.faq-question h4 {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    margin: 0;
+    flex: 1;
+}
+
+.faq-question i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p,
+.faq-answer ul {
+    padding: 1.5rem;
+    margin: 0;
+}
+
+.faq-answer ul {
+    list-style: none;
+    padding-left: 2rem;
+}
+
+.faq-answer li {
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+.faq-answer li strong {
+    color: var(--dark-color);
+}
+
+.faq-answer a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.faq-answer a:hover {
+    color: var(--secondary-color);
+}
+@media (max-width: 768px) {
+    .faq-category-title {
+        font-size: 1.5rem;
+    }
+
+    .faq-question h4 {
+        font-size: 1rem;
+    }
+
+    .politica-section-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .cookie-table {
+        font-size: 0.9rem;
+    }
+
+    .cookie-table th,
+    .cookie-table td {
+        padding: 0.8rem;
+    }
+
+    .browser-controls {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===========================
+   Footer
+   =========================== */
+.footer {
+    background: #4A3628;
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-logo h3 {
+    color: var(--auxiliar-color);
+}
+
+.footer-description {
+    margin-bottom: 1rem;
+    color: #CCC;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-column h4 {
+    color: var(--auxiliar-color);
+    margin-bottom: 1rem;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #CCC;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+.footer-hours {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-hours h5 {
+    color: var(--auxiliar-color);
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #AAA;
+}
+/* ===========================
+   WhatsApp Flotante
+   =========================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 999;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background: #1EBE57;
+    transform: scale(1.1);
+}
