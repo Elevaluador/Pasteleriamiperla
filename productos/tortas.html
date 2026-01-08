@@ -7,51 +7,38 @@
     <meta name="keywords" content="tortas personalizadas en chiclayo, tortas de cumpleaños, tortas de boda, pasteleria fina chiclayo, tortas tres leches">
     <meta name="robots" content="index, follow">
     <title>Tortas Personalizadas en Chiclayo | Pastelería Mi Perla</title>
-      <!-- PNG -->
-    <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-pasteleria-miperla-chiclayo.png">
-     <!-- Apple -->
-    <link rel="canonical" href="https://www.pasteleriamiperla.online/tortas">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-pasteleria-miperla.png">
-    <link rel="preload" as="image" href="/images/logo-pasteleria-miperla-chiclayo.jpg">
-    <link rel="preload" href="/css/tortas.css" as="style">
-    <link rel="stylesheet" href="/css/tortas.css" media="print" onload="this.media='all'">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload"href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" 
-    as="style">
-   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" 
-  media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D5CQ5ZEEYX');
-</script>
     
+    <!-- Favicons optimizados -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-pasteleria-miperla-chiclayo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-pasteleria-miperla.png">
+    <link rel="canonical" href="https://www.pasteleriamiperla.online/productos/tortas">
+    
+    <!-- CSS crítico inline -->
     <style>
 /* ===========================
    Variables y Reset
    =========================== */
 :root {
-    --primary-color: #C41E3A; /* Dorado */
-    --secondary-color: #22c4e0; /* Rojo/Rosado */
-    --auxiliar-color:#e0b506; /* Rojo/Rosado */
-    --dark-color: #2C1810; /* Marrón oscuro */
-    --light-color: #FFF5E6; /* Crema claro */
+    --primary-color: #C41E3A;
+    --secondary-color: #22c4e0;
+    --auxiliar-color: #e0b506;
+    --dark-color: #2C1810;
+    --light-color: #FFF5E6;
     --white: #FFFFFF;
     --gray: #666666;
     --light-gray: #F5F5F5;
     --shadow: rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    --container-width: 1200px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -83,21 +70,38 @@ ul {
     list-style: none;
 }
 
+/* Container consistente */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100%;
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-/* ===========================
-   Header y Navegación
-   =========================== */
+@media (min-width: 768px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+/* Header y Navegación */
 .header {
     background: var(--white);
     box-shadow: 0 2px 10px var(--shadow);
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .nav {
@@ -114,7 +118,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: 'Playfair Display', serif;
     color: var(--primary-color);
     font-weight: 700;
@@ -168,7 +172,6 @@ ul {
     border: none;
     cursor: pointer;
     z-index: 1001;
-    position: relative;
 }
 
 .nav-toggle span {
@@ -179,19 +182,19 @@ ul {
     border-radius: 2px;
 }
 
-/* Animación del menú hamburguesa a X */
 .nav-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(8px, 8px);
 }
 
 .nav-toggle.active span:nth-child(2) {
     opacity: 0;
-    transform: translateX(-20px);
 }
 
 .nav-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
 }
+
+/* Page Header */
 .page-header {
     background: linear-gradient(
         to right,
@@ -201,13 +204,62 @@ ul {
         var(--secondary-color) 100%
     );
     color: var(--white);
-    padding: 100px 0 60px;
+    padding: 100px 20px 60px;
     text-align: center;
+    width: 100%;
 }
 
-/* ===========================
-   Responsive
-   =========================== */
+.categoria-descripcion,
+.galeria-productos,
+.sabores-section,
+.cta-section {
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.categoria-descripcion {
+    background: var(--white);
+}
+
+
+@media (min-width: 1024px) {
+    .categoria-descripcion,
+    .galeria-productos,
+    .sabores-section,
+    .cta-section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+/* WhatsApp Flotante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 999;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float svg {
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .nav-toggle {
         display: flex;
@@ -230,81 +282,45 @@ ul {
         left: 0;
     }
 
-    .hero-title {
-        font-size: 3rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.5rem;
-    }
-
-    .about-content,
-    .local-content,
-    .pedidos-content {
-        grid-template-columns: 1fr;
-    }
-
-    .about-features {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        font-size: 2rem;
+    .page-header {
+        padding: 80px 15px 40px;
     }
 
     .page-header h1 {
         font-size: 2rem;
     }
-
-    .hero-buttons,
-    .cta-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .local-content.reverse {
-        direction: ltr;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .products-grid,
-    .categorias-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .modal-content {
-        width: 95%;
-        padding: 1rem;
-    }
 }
     </style>
+    
+    <!-- Preload recursos críticos -->
+    <link rel="preload" as="image" href="/images/logo-pasteleria-mi-perla.png" fetchpriority="high">
+    <link rel="preload" href="/css/tortas.css?v=2.1" as="style">
+    <link rel="stylesheet" href="/css/tortas.css?v=2.1" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/css/tortas.css?v=2.1"></noscript>
 
+    <!-- Fuentes con font-display swap -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Google Analytics async -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5CQ5ZEEYX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D5CQ5ZEEYX');
+    </script>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="nav">
             <div class="container nav-container">
-                <div class="logo">
-                    <a href="/index.html">
-                       <img src="/images/logo-pasteleria-miperla-chiclayo.jpg" alt="logo de pasteleria mi perla en chicalyo">
-                    <span> Pasteleria Mi Perla</span>
-                    </a>
-                </div>
+                <a href="/index.html" class="logo">
+                    <img src="/images/logo-pasteleria-mi-perla.png" alt="logo de pasteleria mi perla en chiclayo" width="150" height="150">
+                    <span>Pasteleria Mi Perla</span>
+                </a>
                 <button class="nav-toggle" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -342,25 +358,43 @@ ul {
                     <p>Ofrecemos una amplia variedad de diseños y sabores, desde elegantes tortas de matrimonio hasta divertidas tortas infantiles temáticas. Cada torta es elaborada con ingredientes de primera calidad y decorada con esmero.</p>
                     <div class="caracteristicas-categoria">
                         <div class="caracteristica">
-                            <i class="fas fa-check-circle"></i>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
                             <span>Diseños 100% personalizados</span>
                         </div>
                         <div class="caracteristica">
-                            <i class="fas fa-check-circle"></i>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
                             <span>Ingredientes premium</span>
                         </div>
                         <div class="caracteristica">
-                            <i class="fas fa-check-circle"></i>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
                             <span>Variedad de sabores</span>
                         </div>
                         <div class="caracteristica">
-                            <i class="fas fa-check-circle"></i>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
                             <span>Entrega puntual garantizada</span>
                         </div>
                     </div>
                 </div>
                 <div class="descripcion-image">
-                    <img src="/images/categoria-tortas-personalizadas.jpg" alt="Tortas Personalizadas en Chiclayo">
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="/images/tortas/categoria-tortas-personalizadas-mobile.webp" type="image/webp">
+                        <source media="(max-width: 768px)" srcset="/images/tortas/categoria-tortas-personalizadas-tablet.webp" type="image/webp">
+                        <source srcset="/images/tortas/categoria-tortas-personalizadas.webp" type="image/webp">
+                        <img src="/images/tortas/categoria-tortas-personalizadas.jpg" 
+                             alt="Tortas Personalizadas en pasteleria mi perla en Chiclayo"
+                             width="700"
+                             height="600"
+                             loading="lazy"
+                             decoding="async">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -374,12 +408,25 @@ ul {
 
             <div class="productos-gallery">
                 <!-- Torta 1 -->
-                <div class="producto-item">
+                <article class="producto-item">
                     <div class="producto-imagen">
-                        <img src="/images/tortas/torta-cumpleaños-tematica-pasteleria-miperla.jpg" alt="Torta de Cumpleaños Temática">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="/images/tortas/torta-cumpleanos-tematica-pasteleria-miperla-mobile.webp" type="image/webp">
+                            <source media="(max-width: 768px)" srcset="/images/tortas/torta-cumpleanos-tematica-pasteleria-miperla-tablet.webp" type="image/webp">
+                            <source srcset="/images/tortas/torta-cumpleanos-tematica-pasteleria-miperla.webp" type="image/webp">
+                            <img src="/images/tortas/torta-cumpleanos-tematica-pasteleria-miperla.jpg" 
+                                 alt="Torta de Cumpleaños Temática en chiclayo"
+                                 width="940"
+                                 height="788"
+                                 loading="lazy"
+                                 decoding="async">
+                        </picture>
                         <div class="producto-overlay">
-                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20de%20Cumpleaños%20Temática" class="btn-ver-mas" target="_blank">
-                                <i class="fab fa-whatsapp"></i> Consultar
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20de%20Cumpleaños%20Temática" class="btn-ver-mas" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                </svg>
+                                Consultar
                             </a>
                         </div>
                     </div>
@@ -387,15 +434,28 @@ ul {
                         <h3>Torta de Cumpleaños Temática</h3>
                         <p>Diseño personalizado según tu tema favorito. Ideal para niños y adultos.</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Torta 2 -->
-                <div class="producto-item">
+                <article class="producto-item">
                     <div class="producto-imagen">
-                        <img src="/images/tortas/torta-matrimonio-pasteleria-miperla.jpg" alt="Torta de Matrimonio Elegante">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="/images/tortas/torta-matrimonio-pasteleria-miperla-mobile.webp" type="image/webp">
+                            <source media="(max-width: 768px)" srcset="/images/tortas/torta-matrimonio-pasteleria-miperla-tablet.webp" type="image/webp">
+                            <source srcset="/images/tortas/torta-matrimonio-pasteleria-miperla.webp" type="image/webp">
+                            <img src="/images/tortas/torta-matrimonio-pasteleria-miperla.jpg" 
+                                 alt="Torta de Matrimonio Elegante de pasteleria mi perla"
+                                 width="940"
+                                 height="788"
+                                 loading="lazy"
+                                 decoding="async">
+                        </picture>
                         <div class="producto-overlay">
-                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20de%20Matrimonio%20Elegante" class="btn-ver-mas" target="_blank">
-                                <i class="fab fa-whatsapp"></i> Consultar
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20de%20Matrimonio%20Elegante" class="btn-ver-mas" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                </svg>
+                                Consultar
                             </a>
                         </div>
                     </div>
@@ -403,15 +463,28 @@ ul {
                         <h3>Torta de Matrimonio Elegante</h3>
                         <p>Hermosos diseños de varios pisos para bodas. Elegancia y sabor en cada detalle.</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Torta 3 -->
-                <div class="producto-item">
+                <article class="producto-item">
                     <div class="producto-imagen">
-                       <img src="/images/tortas/torta-infantil-pasteleria-miperla.jpg"alt="Torta Infantil Creativa">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="/images/tortas/torta-infantil-pasteleria-miperla-mobile.webp" type="image/webp">
+                            <source media="(max-width: 768px)" srcset="/images/tortas/torta-infantil-pasteleria-miperla-tablet.webp" type="image/webp">
+                            <source srcset="/images/tortas/torta-infantil-pasteleria-miperla.webp" type="image/webp">
+                            <img src="/images/tortas/torta-infantil-pasteleria-miperla.jpg" 
+                                 alt="Torta Infantil Creativa de pasteleria en chiclayo"
+                                 width="940"
+                                 height="788"
+                                 loading="lazy"
+                                 decoding="async">
+                        </picture>
                         <div class="producto-overlay">
-                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Infantil%20Creativa" class="btn-ver-mas" target="_blank">
-                                <i class="fab fa-whatsapp"></i> Consultar
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Infantil%20Creativa" class="btn-ver-mas" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                </svg>
+                                Consultar
                             </a>
                         </div>
                     </div>
@@ -419,28 +492,50 @@ ul {
                         <h3>Torta Infantil Creativa</h3>
                         <p>Personajes favoritos de tus hijos. Diseños divertidos y coloridos.</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Torta 4 -->
-                <div class="producto-item">
+                <article class="producto-item">
                     <div class="producto-imagen">
-                        <img src="/images/tortas/torta-sanvalentin-pasteleria-miperla.jpg" alt="Torta san valentin de pasteleria de chiclayo">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="/images/tortas/torta-sanvalentin-pasteleria-miperla-mobile.webp" type="image/webp">
+                            <source media="(max-width: 768px)" srcset="/images/tortas/torta-sanvalentin-pasteleria-miperla-tablet.webp" type="image/webp">
+                            <source srcset="/images/tortas/torta-sanvalentin-pasteleria-miperla.webp" type="image/webp">
+                            <img src="/images/tortas/torta-sanvalentin-pasteleria-miperla.jpg" 
+                                 alt="Torta san valentin de pasteleria de chiclayo"
+                                 width="940"
+                                 height="788"
+                                 loading="lazy"
+                                 decoding="async">
+                        </picture>
                         <div class="producto-overlay">
-                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Corporativa" class="btn-ver-mas" target="_blank">
-                                <i class="fab fa-whatsapp"></i> Consultar
+                            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20de%20San%20Valentín" class="btn-ver-mas" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                </svg>
+                                Consultar
                             </a>
                         </div>
                     </div>
                     <div class="producto-info">
-                        <h3>Torta De san Valentin</h3>
-                        <p>Diseños creativos para el dia del amor y la amistad.Ideales para dedicarle un mensaje del corazon.</p>
+                        <h3>Torta De San Valentín</h3>
+                        <p>Diseños creativos para el día del amor y la amistad. Ideales para dedicar un mensaje del corazón.</p>
                     </div>
-                </div>
-
+                </article>
                 <!-- Torta 5 -->
-                <div class="producto-item">
+                <article class="producto-item">
                     <div class="producto-imagen">
-                        <img src="/images/tortas/torta-niñas-pasteleria-miperla.jpg" alt="Torta para cumpleañs de niñas">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="/images/tortas/torta-niñas-pasteleria-miperla-mobile.webp" type="image/webp">
+                            <source media="(max-width: 768px)" srcset="/images/tortas/torta-niñas-pasteleria-miperla-tablet.webp" type="image/webp">
+                            <source srcset="/images/tortas/torta-niñas-pasteleria-miperla.webp" type="image/webp">
+                            <img src="/images/tortas/torta-niñas-pasteleria-miperla.jpg" 
+                                 alt="Torta para niñas de pasteleria de chiclayo"
+                                 width="940"
+                                 height="788"
+                                 loading="lazy"
+                                 decoding="async">
+                        </picture>
                         <div class="producto-overlay">
                             <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Tres%20Leches%20Premium" class="btn-ver-mas" target="_blank">
                                 <i class="fab fa-whatsapp"></i> Consultar
@@ -451,12 +546,22 @@ ul {
                         <h3>Torta para Niñas</h3>
                         <p>Tortas ideales para celebrar el cumpleaños de tu pequeña, con el estilo que mas le guste.</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Torta 6 -->
-                <div class="producto-item">
+                <article class="producto-item">
                     <div class="producto-imagen">
-                        <img src="/images/tortas/torta-diamadre-pasteleria-miperla.jpg" alt="Torta del dia de la madre">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="/images/tortas/torta-diamadre-pasteleria-miperla-mobile.webp" type="image/webp">
+                            <source media="(max-width: 768px)" srcset="/images/tortas/torta-diamadre-pasteleria-miperla-tablet.webp" type="image/webp">
+                            <source srcset="/images/tortas/torta-diamadre-pasteleria-miperla.webp" type="image/webp">
+                            <img src="/images/tortas/torta-diamadre-pasteleria-miperla.jpg" 
+                                 alt="Torta para dia de la madre de pasteleria de chiclayo"
+                                 width="940"
+                                 height="788"
+                                 loading="lazy"
+                                 decoding="async">
+                        </picture>
                         <div class="producto-overlay">
                             <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20de%20Chocolate" class="btn-ver-mas" target="_blank">
                                 <i class="fab fa-whatsapp"></i> Consultar
@@ -467,12 +572,22 @@ ul {
                         <h3>Torta del dia de la Madre</h3>
                         <p>Torta para celabrar el dia de la madre e ingreirla por su esfuerzo diario. Con la tematica y la dedicatoria, que mas te enamore</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Torta 7 -->
-                <div class="producto-item">
+                <article class="producto-item">
                     <div class="producto-imagen">
-                        <img src="/images/tortas/torta-selva-negra-pasteleria-miperla.jpg" alt="Torta Selva Negra de pasteleria en chiclayo">
+                          <picture>
+                            <source media="(max-width: 480px)" srcset="/images/tortas/torta-selva-negra-pasteleria-miperla-mobile.webp" type="image/webp">
+                            <source media="(max-width: 768px)" srcset="/images/tortas/torta-selva-negra-pasteleria-miperla-tablet.webp" type="image/webp">
+                            <source srcset="/images/tortas/torta-selva-negra-pasteleria-miperla.webp" type="image/webp">
+                            <img src="/images/tortas/torta-selva-negra-pasteleria-miperla.jpg" 
+                                 alt="Torta  de selva negra de pasteleria mi perla"
+                                 width="940"
+                                 height="788"
+                                 loading="lazy"
+                                 decoding="async">
+                        </picture>
                         <div class="producto-overlay">
                             <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Selva%20Negra" class="btn-ver-mas" target="_blank">
                                 <i class="fab fa-whatsapp"></i> Consultar
@@ -483,12 +598,22 @@ ul {
                         <h3>Torta Selva Negra</h3>
                         <p>Tradicional torta con cerezas y crema. Sabor clásico y elegante.</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Torta 8 -->
-                <div class="producto-item">
+                <article class="producto-item">
                     <div class="producto-imagen">
-                        <img src="/images/tortas/torta-dia-padre-pasteleria-miperla.jpg" alt="Torta del dia de papa">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="/images/tortas/torta-dia-padre-pasteleria-miperla-mobile.webp" type="image/webp">
+                            <source media="(max-width: 768px)" srcset="/images/tortas/torta-dia-padre-pasteleria-miperla-tablet.webp" type="image/webp">
+                            <source srcset="/images/tortas/torta-dia-padre-pasteleria-miperla.webp" type="image/webp">
+                            <img src="/images/tortas/torta-dia-padre-pasteleria-miperla.jpg" 
+                                 alt="Torta  del dia del padre de pasteleria en chiclayo"
+                                 width="940"
+                                 height="788"
+                                 loading="lazy"
+                                 decoding="async">
+                        </picture>
                         <div class="producto-overlay">
                             <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20de%20Frutas" class="btn-ver-mas" target="_blank">
                                 <i class="fab fa-whatsapp"></i> Consultar
@@ -499,12 +624,22 @@ ul {
                         <h3>Torta del dia del padre</h3>
                         <p>Torta para agradecerle a los padres, por cuidar que no te falta nada e incluso, ayudarte a cumplir tus caprichos.</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Torta 9 -->
-                <div class="producto-item">
+                <article class="producto-item">
                     <div class="producto-imagen">
-                        <img src="/images/tortas/torta-chocolate-pasteleria-miperla.jpg" alt="Torta de chocolate de pasteleria en chiclayo">
+                         <picture>
+                            <source media="(max-width: 480px)" srcset="/images/tortas/torta-chocolate-pasteleria-miperla-mobile.webp" type="image/webp">
+                            <source media="(max-width: 768px)" srcset="/images/tortas/torta-chocolate-pasteleria-miperla-tablet.webp" type="image/webp">
+                            <source srcset="/images/tortas/torta-chocolate-pasteleria-miperla.webp" type="image/webp">
+                            <img src="/images/tortas/torta-chocolate-pasteleria-miperla.jpg" 
+                                 alt="Torta de chocolate de pasteleria mi perla en chiclayo"
+                                 width="940"
+                                 height="788"
+                                 loading="lazy"
+                                 decoding="async">
+                        </picture>
                         <div class="producto-overlay">
                             <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Red%20Velvet" class="btn-ver-mas" target="_blank">
                                 <i class="fab fa-whatsapp"></i> Consultar
@@ -515,12 +650,22 @@ ul {
                         <h3>Torta de Chocolate</h3>
                         <p>Intensa torta de chocolate con ganache. Para los verdaderos amantes del chocolate</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Torta 10 -->
-                <div class="producto-item">
+                <article class="producto-item">
                     <div class="producto-imagen">
-                        <img src="/images/tortas/torta-sporting-cristal-pasteleria-miperla.jpg" alt="Torta del sporting  cristal en chiclayo">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="/images/tortas/torta-sporting-cristal-pasteleria-miperla-mobile.webp" type="image/webp">
+                            <source media="(max-width: 768px)" srcset="/images/tortas/torta-sporting-cristal-pasteleria-miperla-tablet.webp" type="image/webp">
+                            <source srcset="/images/tortas/torta-sporting-cristal-pasteleria-miperla.webp" type="image/webp">
+                            <img src="/images/tortas/torta-sporting-cristal-pasteleria-miperla.jpg" 
+                                 alt="Torta del soporting cristal en chiclayo"
+                                 width="940"
+                                 height="788"
+                                 loading="lazy"
+                                 decoding="async">
+                        </picture>
                         <div class="producto-overlay">
                             <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Personalizada%203D" class="btn-ver-mas" target="_blank">
                                 <i class="fab fa-whatsapp"></i> Consultar
@@ -531,11 +676,21 @@ ul {
                         <h3>Torta Deportiva del Sporting Cristal</h3>
                         <p>Diseño deportivo para amanates del futbol y en especial del equipo sporting cristal</p>
                     </div>
-                </div>
+                </article>
                      <!-- Torta 11 -->
-                <div class="producto-item">
+                <article class="producto-item">
                     <div class="producto-imagen">
-                        <img src="/images/tortas/torta-bautizo-pasteleria-miperla.jpg" alt="Torta de bautizo en chiclayo">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="/images/tortas/torta-bautizo-pasteleria-miperla-mobile.webp" type="image/webp">
+                            <source media="(max-width: 768px)" srcset="/images/tortas/torta-bautizo-pasteleria-miperla-tablet.webp" type="image/webp">
+                            <source srcset="/images/tortas/torta-bautizo-pasteleria-miperla.webp" type="image/webp">
+                            <img src="/images/tortas/torta-bautizo-pasteleria-miperla.jpg" 
+                                 alt="Torta del bautizo de pasteleria mi perla en chiclayo"
+                                 width="940"
+                                 height="788"
+                                 loading="lazy"
+                                 decoding="async">
+                        </picture>
                         <div class="producto-overlay">
                             <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Personalizada%203D" class="btn-ver-mas" target="_blank">
                                 <i class="fab fa-whatsapp"></i> Consultar
@@ -547,11 +702,21 @@ ul {
                         <p>Diseño para celebrar el bautizo de cualquiera de tus hijos. Y que de la
                              bienvenida a Dios, como buen cristiano.</p>
                     </div>
-                </div>
+                </article>
                      <!-- Torta 12 -->
-                <div class="producto-item">
+                <article class="producto-item">
                     <div class="producto-imagen">
-                        <img src="/images/tortas/torta-deportiva-alianza.jpg" alt="Torta deportiva de la alianza en chiclayo">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="/images/tortas/torta-deportiva-alianza-mobile.webp" type="image/webp">
+                            <source media="(max-width: 768px)" srcset="/images/tortas/torta-deportiva-alianza-tablet.webp" type="image/webp">
+                            <source srcset="/images/tortas/torta-deportiva-alianza.webp" type="image/webp">
+                            <img src="/images/tortas/torta-deportiva-alianza.jpg" 
+                                 alt="Torta deportiva de alianza lima de pasteleria mi perla"
+                                 width="940"
+                                 height="788"
+                                 loading="lazy"
+                                 decoding="async">
+                        </picture>
                         <div class="producto-overlay">
                             <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20información%20sobre%20Torta%20Personalizada%203D" class="btn-ver-mas" target="_blank">
                                 <i class="fab fa-whatsapp"></i> Consultar
@@ -562,9 +727,7 @@ ul {
                         <h3>Torta Deportiva de la alianza</h3>
                         <p>Diseño deportivo para amanates del futbol y en especial del equipo de la alianza</p>
                     </div>
-                </div>
-            </div>
-            </div>
+                </article>
             </div>
         </div>
     </section>
@@ -575,40 +738,29 @@ ul {
             <h2>Sabores Disponibles</h2>
             <div class="sabores-grid">
                 <div class="sabor-item">
-                    <i class="fas fa-birthday-cake"></i>
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
+                        <path d="M12 6c1.11 0 2-.9 2-2 0-.38-.1-.73-.29-1.03L12 0l-1.71 2.97c-.19.3-.29.65-.29 1.03 0 1.1.9 2 2 2zm4.6 9.99l-1.07-1.07-1.08 1.07c-1.3 1.3-3.58 1.31-4.89 0l-1.07-1.07-1.09 1.07C6.75 16.64 5.88 17 4.96 17c-.73 0-1.4-.23-1.96-.61V21c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-4.61c-.56.38-1.23.61-1.96.61-.92 0-1.79-.36-2.44-1.01zM18 9h-5V7h-2v2H6c-1.66 0-3 1.34-3 3v1.54c0 1.08.88 1.96 1.96 1.96.52 0 1.02-.2 1.38-.57l2.14-2.13 2.13 2.13c.74.74 2.03.74 2.77 0l2.14-2.13 2.13 2.13c.37.37.86.57 1.38.57 1.08 0 1.96-.88 1.96-1.96V12C21 10.34 19.66 9 18 9z"/>
+                    </svg>
                     <h4>Tres Leches</h4>
                 </div>
                 <div class="sabor-item">
-                    <i class="fas fa-birthday-cake"></i>
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
+                        <path d="M12 6c1.11 0 2-.9 2-2 0-.38-.1-.73-.29-1.03L12 0l-1.71 2.97c-.19.3-.29.65-.29 1.03 0 1.1.9 2 2 2zm4.6 9.99l-1.07-1.07-1.08 1.07c-1.3 1.3-3.58 1.31-4.89 0l-1.07-1.07-1.09 1.07C6.75 16.64 5.88 17 4.96 17c-.73 0-1.4-.23-1.96-.61V21c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-4.61c-.56.38-1.23.61-1.96.61-.92 0-1.79-.36-2.44-1.01zM18 9h-5V7h-2v2H6c-1.66 0-3 1.34-3 3v1.54c0 1.08.88 1.96 1.96 1.96.52 0 1.02-.2 1.38-.57l2.14-2.13 2.13 2.13c.74.74 2.03.74 2.77 0l2.14-2.13 2.13 2.13c.37.37.86.57 1.38.57 1.08 0 1.96-.88 1.96-1.96V12C21 10.34 19.66 9 18 9z"/>
+                    </svg>
                     <h4>Chocolate</h4>
                 </div>
                 <div class="sabor-item">
-                    <i class="fas fa-birthday-cake"></i>
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
+                        <path d="M12 6c1.11 0 2-.9 2-2 0-.38-.1-.73-.29-1.03L12 0l-1.71 2.97c-.19.3-.29.65-.29 1.03 0 1.1.9 2 2 2zm4.6 9.99l-1.07-1.07-1.08 1.07c-1.3 1.3-3.58 1.31-4.89 0l-1.07-1.07-1.09 1.07C6.75 16.64 5.88 17 4.96 17c-.73 0-1.4-.23-1.96-.61V21c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-4.61c-.56.38-1.23.61-1.96.61-.92 0-1.79-.36-2.44-1.01zM18 9h-5V7h-2v2H6c-1.66 0-3 1.34-3 3v1.54c0 1.08.88 1.96 1.96 1.96.52 0 1.02-.2 1.38-.57l2.14-2.13 2.13 2.13c.74.74 2.03.74 2.77 0l2.14-2.13 2.13 2.13c.37.37.86.57 1.38.57 1.08 0 1.96-.88 1.96-1.96V12C21 10.34 19.66 9 18 9z"/>
+                    </svg>
                     <h4>Vainilla</h4>
                 </div>
                 <div class="sabor-item">
-                    <i class="fas fa-birthday-cake"></i>
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
+                        <path d="M12 6c1.11 0 2-.9 2-2 0-.38-.1-.73-.29-1.03L12 0l-1.71 2.97c-.19.3-.29.65-.29 1.03 0 1.1.9 2 2 2zm4.6 9.99l-1.07-1.07-1.08 1.07c-1.3 1.3-3.58 1.31-4.89 0l-1.07-1.07-1.09 1.07C6.75 16.64 5.88 17 4.96 17c-.73 0-1.4-.23-1.96-.61V21c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-4.61c-.56.38-1.23.61-1.96.61-.92 0-1.79-.36-2.44-1.01zM18 9h-5V7h-2v2H6c-1.66 0-3 1.34-3 3v1.54c0 1.08.88 1.96 1.96 1.96.52 0 1.02-.2 1.38-.57l2.14-2.13 2.13 2.13c.74.74 2.03.74 2.77 0l2.14-2.13 2.13 2.13c.37.37.86.57 1.38.57 1.08 0 1.96-.88 1.96-1.96V12C21 10.34 19.66 9 18 9z"/>
+                    </svg>
                     <h4>Selva Negra</h4>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Otras Categorías -->
-    <section class="otras-categorias" hidden>
-        <div class="container">
-            <h2>Explora Otras Categorías</h2>
-            <div class="categorias-relacionadas">
-                <a href="bocaditos.html" class="categoria-card-small">
-                    <img src="images/categoria-bocaditos.jpg" alt="Bocaditos">
-                    <h3>Bocaditos</h3>
-                    <p>Dulces y salados para eventos</p>
-                </a>
-                <a href="cupcakes.html" class="categoria-card-small">
-                    <img src="images/categoria-cupcakes.jpg" alt="Cupcakes">
-                    <h3>Cupcakes Personalizados</h3>
-                    <p>Diseños creativos y deliciosos</p>
-                </a>
             </div>
         </div>
     </section>
@@ -616,49 +768,69 @@ ul {
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <div class="cta-content">
-                <h2>¿Listo para ordenar tu torta personalizada?</h2>
-                <p>Contáctanos por WhatsApp y te ayudaremos a crear la torta perfecta</p>
-                <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20ordenar%20una%20torta%20personalizada" class="btn btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Hacer Pedido por WhatsApp
-                </a>
-            </div>
+            <h2>¿Listo para ordenar tu torta personalizada?</h2>
+            <p>Contáctanos por WhatsApp y te ayudaremos a crear la torta perfecta</p>
+            <a href="https://wa.me/51985556216?text=Hola,%20quisiera%20ordenar%20una%20torta%20personalizada" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Hacer Pedido por WhatsApp
+            </a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Footer (igual que otras páginas) -->
+    <footer class="footer" id="contacto">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <div class="footer-logo">
-                        <img src="/images/logo-pasteleria-miperla-chiclayo.webp" alt="Pasteleria fina mi perla en chiclayo">
+                        <img src="/images/logo-pasteleria-miperla-chiclayo.png" 
+                             alt="Pasteleria fina mi perla en chiclayo" 
+                             width="150" 
+                             height="150"
+                             loading="lazy"
+                             decoding="async">
                         <h3>Mi Perla</h3>
                     </div>
                     <p class="footer-description">Líder en Pastelería Fina</p>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/tortamiperla" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/pasteleriamiperla/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/51985556216" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                       <a href="https://www.facebook.com/tortamiperla" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/pasteleriamiperla/" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/51985556216" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h4>Contact Center</h4>
                     <ul class="footer-links">
                         <li>
-                            <i class="fab fa-whatsapp"></i>
+                            <img src="/images/WhatsApp_icon.png" alt="" width="25" height="25">
                             <a href="https://wa.me/51985556216">985 556 216</a>
                         </li>
                         <li>
-                            <i class="fab fa-whatsapp"></i>
+                            <img src="/images/WhatsApp_icon.png" alt="" width="25" height="25">
                             <a href="https://wa.me/51939665548">939 665 548</a>
                         </li>
                         <li>
-                            <i class="fab fa-whatsapp"></i>
+                            <img src="/images/WhatsApp_icon.png" alt="" width="25" height="25">
                             <a href="https://wa.me/51914906183">914 906 183</a>
                         </li>
                         <li>
-                            <i class="fas fa-envelope"></i>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
                             <a href="mailto:pasteleriamiperla@gmail.com">pasteleriamiperla@gmail.com</a>
                         </li>
                     </ul>
@@ -666,36 +838,39 @@ ul {
                 <div class="footer-column">
                     <h4>Nosotros</h4>
                     <ul class="footer-links">
-                        <li><a href="/locales.html">Nuestras Tiendas</a></li>
-                        <li><a href="/cobertura.html">Cobertura</a></li>
-                        <li><a href="/productos.html">Nuestros Productos</a></li>
+                        <li><a href="locales.html">Nuestras Tiendas</a></li>
+                        <li><a href="cobertura.html">Cobertura</a></li>
+                        <li><a href="productos.html">Nuestros Productos</a></li>
                     </ul>
-                      <div class="footer-hours">
+                </div>
+                <div class="footer-column">
+                    <h4>Servicio al Cliente</h4>
+                    <ul class="footer-links">
+                        <li><a href="../preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                        <li><a href="../politica-cookies.html">Política de Cookies</a></li>
+                    </ul>
+                    <div class="footer-hours">
                         <h5>Horario de Atención</h5>
                         <p>Lunes a Jueves de 7am a 10pm</p>
                         <p>Viernes- Sábado  7am - 9pm</p>
                         <p>Domingo de 7am-8pm</p>
                     </div>
                 </div>
-                <div class="footer-column">
-                    <h4>Servicio al Cliente</h4>
-                    <ul class="footer-links">
-                        <li><a href="/preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
-                        <li><a href="/politica-cookies.html">Política de Cookies</a></li>
-                    </ul>
-                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Pastelería Mi Perla. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Pastelería Mi Perla. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Flotante -->
-    <a href="https://wa.me/51985556216" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <a href="https://wa.me/51985556216" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
     </a>
 
-    <script src="js/main.js"></script>
+    <!-- JavaScript con defer -->
+    <script defer src="/js/main.js"></script>
 </body>
 </html>

@@ -7,44 +7,27 @@
     <meta name="keywords" content="pasteleria en chiclayo, pasteleria en la victoria chiclayo, sucursales pasteleria">
     <meta name="robots" content="index, follow">
     <title>Locales y Horarios de Pastelería Mi Perla</title>
-      <!-- PNG -->
+    <!-- Favicons optimizados -->
     <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-pasteleria-miperla-chiclayo.png">
-     <!-- Apple -->
-    <link rel="canonical" href="https://www.pasteleriamiperla.online/locales">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-pasteleria-miperla.png">
-    <link rel="preload" as="image" href="images/logo-pasteleria-miperla-chiclayo.jpg">
-    <link rel="preload" href="/css/locales.css" as="style">
-    <link rel="stylesheet" href="/css/locales.css" media="print" onload="this.media='all'">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload"href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" 
-    as="style">
-   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" 
-  media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D5CQ5ZEEYX');
-</script>
-    <style>
+    <link rel="canonical" href="https://www.pasteleriamiperla.online/locales">
+     <!-- CSS crítico inline para First Contentful Paint -->
+   <style>
 /* ===========================
    Variables y Reset
    =========================== */
 :root {
-    --primary-color: #C41E3A; /* Dorado */
-    --secondary-color: #22c4e0; /* Rojo/Rosado */
-    --auxiliar-color:#e0b506; /* Rojo/Rosado */
-    --dark-color: #2C1810; /* Marrón oscuro */
-    --light-color: #FFF5E6; /* Crema claro */
+    --primary-color: #C41E3A;
+    --secondary-color: #22c4e0;
+    --auxiliar-color:#e0b506;
+    --dark-color: #2C1810;
+    --light-color: #FFF5E6;
     --white: #FFFFFF;
     --gray: #666666;
     --light-gray: #F5F5F5;
     --shadow: rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    --max-width: 1200px; /* Ancho máximo consistente */
 }
 
 * {
@@ -82,10 +65,21 @@ ul {
     list-style: none;
 }
 
+/* ===========================
+   CONTENEDOR GLOBAL CONSISTENTE
+   =========================== */
 .container {
-    max-width: 1200px;
+    width: 100%;
+    max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px; /* Padding fijo para evitar CLS */
+}
+
+/* Asegurar que todas las secciones tengan el mismo comportamiento */
+section {
+    width: 100%;
+    overflow-x: hidden;
+    contain: layout; /* Optimización de rendering */
 }
 
 /* ===========================
@@ -97,16 +91,21 @@ ul {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
+    contain: layout style; /* Evitar reflow */
 }
 
 .nav {
     padding: 1rem 0;
+    width: 100%;
+    min-height: 90px; /* Altura mínima para evitar saltos */
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .logo {
@@ -119,12 +118,13 @@ ul {
     font-weight: 700;
 }
 
-.logo img {
+
+.logo img {   
+    object-fit: contain;
     width: 150px;
     height: 150px;
-    object-fit: contain;
-}
-
+        
+    }
 .nav-menu {
     display: flex;
     gap: 2rem;
@@ -178,7 +178,6 @@ ul {
     border-radius: 2px;
 }
 
-/* Animación del menú hamburguesa a X */
 .nav-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(8px, 8px);
 }
@@ -191,6 +190,10 @@ ul {
 .nav-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
 }
+
+/* ===========================
+   Page Header - ANCHO COMPLETO
+   =========================== */
 .page-header {
     background: linear-gradient(
         to right,
@@ -200,14 +203,106 @@ ul {
         var(--secondary-color) 100%
     );
     color: var(--white);
-    padding: 100px 0 60px;
+    padding: 100px 20px 60px;
     text-align: center;
+    width: 100%;
+}
+
+.page-header .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/*locales-intro*/
+.locales-intro h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+.locales-intro {
+    text-align: center;
+   /* margin-bottom: 3rem;*/
+}
+.locales-intro p {
+    color: var(--gray);
+    font-size: 1.1rem;
+}
+
+/* ===========================
+   Iconos SVG - Dimensiones fijas
+   =========================== */
+.icon-svg {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-svg-large {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ===========================
+   Mapas - Aspect Ratio responsivo
+   =========================== */
+.local-map {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* Aspect ratio 4:3 */
+    height: 0;
+    overflow: hidden;
+}
+
+.local-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ===========================
+   WhatsApp Flotante
+   =========================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 999;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background: #1EBE57;
+    transform: scale(1.1);
+}
+
+.whatsapp-float img {
+    width: 30px;
+    height: 30px;
 }
 
 /* ===========================
    Responsive
    =========================== */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 40px; /* Tablet: padding medio */
+    }
     .nav-toggle {
         display: flex;
     }
@@ -229,80 +324,57 @@ ul {
         left: 0;
     }
 
-    .hero-title {
-        font-size: 3rem;
+    .logo span {
+        font-size: 1.2rem;
     }
 
-    .hero-subtitle {
-        font-size: 1.5rem;
-    }
-
-    .about-content,
-    .local-content,
-    .pedidos-content {
-        grid-template-columns: 1fr;
-    }
-
-    .about-features {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        font-size: 2rem;
+    .page-header {
+        padding: 80px 15px 40px;
     }
 
     .page-header h1 {
         font-size: 2rem;
     }
-
-    .hero-buttons,
-    .cta-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .local-content.reverse {
-        direction: ltr;
-    }
 }
 
-@media (max-width: 480px) {
-    .hero-title {
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 60px; /* Desktop: padding grande */
+    }
+
+     .locales-intro h2 {
         font-size: 2.5rem;
-    }
-
-    .products-grid,
-    .categorias-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .modal-content {
-        width: 95%;
-        padding: 1rem;
     }
 }
     </style>
+    <!-- Preload recursos críticos -->
+    <link rel="preload" as="image" href="images/logo-pasteleria-mi-perla.png" fetchpriority="high">
+    <link rel="preload" href="/css/locales.css?v=0.7" as="style">
+    <link rel="stylesheet" href="/css/locales.css?v=0.7" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/css/locales.css?v=0.7"></noscript>
+
+  <!-- Fuentes con font-display swap -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+     <!-- Google Analytics async -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5CQ5ZEEYX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D5CQ5ZEEYX');
+    </script>
 </head>
 
 <body>
-    <!-- Header -->
+   <!-- Header -->
     <header class="header">
         <nav class="nav">
             <div class="container nav-container">
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="images/logo-pasteleria-miperla-chiclayo.jpg" alt="logo de pasteleria mi perla en chicalyo">
-                    <span> Pasteleria Mi Perla</span>
-                    </a>
+                    <img src="images/logo-pasteleria-mi-perla.png" alt="logo de pasteleria mi perla en chicalyo" width="150" height="150">
+                    <span>Pasteleria Mi Perla</span>
                 </div>
                 <button class="nav-toggle" aria-label="Toggle navigation">
                     <span></span>
@@ -311,10 +383,10 @@ ul {
                 </button>
                 <ul class="nav-menu">
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="locales.html" class="active">Locales y Horarios</a></li>
+                    <li><a href="locales.html">Locales y Horarios</a></li>
                     <li><a href="cobertura.html">Cobertura</a></li>
                     <li><a href="productos.html">Productos</a></li>
-                    <li><a href="index.html#contacto">Contacto</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
         </nav>
@@ -331,100 +403,118 @@ ul {
     <!-- Locales Section -->
     <section class="locales-section">
         <div class="container">
-            <div class="locales-intro">
+            <header class="locales-intro">
                 <h2>Nuestras Sucursales en Chiclayo</h2>
                 <p>Contamos con 3 tiendas estratégicamente ubicadas para brindarte el mejor servicio</p>
-            </div>
+            </header>
 
             <!-- Local 1 -->
-            <div class="local-detail">
+            <article class="local-detail">
                 <div class="local-content">
-                    <div class="local-info">
-                        <div class="local-number">01</div>
+                    <section class="local-info">
+                        <span class="local-number">01</span>
                         <h3>Sede Pedro Ruiz</h3>
-                        <div class="local-address">
-                            <i class="fas fa-map-marker-alt"></i>
+                        <address class="local-address">
+                             <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                             </svg>
                             <p>Av. Pedro Ruiz 890, Chiclayo</p>
-                        </div>
-                        <div class="local-contact">
-                            <a href="https://wa.me/51985556216" class="btn-whatsapp" target="_blank">
-                                <i class="fab fa-whatsapp"></i> 985 556 216
+                        </address>
+                        <nav class="local-contact">
+                            <a href="https://wa.me/51985556216" class="btn-whatsapp" target="_blank" rel="noopener">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                </svg> 985 556 216
                             </a>
                             <a href="tel:+51985556216" class="btn-phone">
-                                <i class="fas fa-phone"></i> Llamar
+                                <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg> Llamar
                             </a>
-                        </div>
-                        <div class="local-features">
-                            <span><i class="fas fa-check"></i> Estacionamiento</span>
-                            <span><i class="fas fa-check"></i> Delivery</span>
-                            <span><i class="fas fa-check"></i> Pedidos personalizados</span>
-                        </div>
-                    </div>
-                    <div class="local-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.0!2d-79.8394!3d-6.7714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDYnMTcuMCJTIDc5wrA1MCcyMS44Ilc!5e0!3m2!1ses!2spe!4v1234567890" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
+                        </nav>
+                        <ul class="local-features">
+                           <li>☑️ Estacionamiento</li>
+                           <li>☑️ Delivery</li>
+                           <li>☑️ Pedidos personalizados</li>
+                        </ul>
+                    </section>
+                    <figure class="local-map">
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.0153545458543!2d-79.84416723204038!3d-6.767981351189971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904ceed772cac415%3A0x10a3a56e0063bda8!2sPasteler%C3%ADa%20Mi%20Perla!5e0!3m2!1ses-419!2spe!4v1767738094481!5m2!1ses-419!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de Sede Pedro Ruiz"></iframe>
+                    </figure>
                 </div>
-            </div>
+            </article>
 
             <!-- Local 2 -->
-            <div class="local-detail">
+            <article class="local-detail">
                 <div class="local-content reverse">
-                    <div class="local-info">
-                        <div class="local-number">02</div>
+                    <section class="local-info">
+                        <span class="local-number">02</span>
                         <h3>Sede San Isidro</h3>
-                        <div class="local-address">
-                            <i class="fas fa-map-marker-alt"></i>
+                        <address class="local-address">
+                            <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
                             <p>Pariñas 899 - Urb. San Isidro, Chiclayo</p>
-                        </div>
-                        <div class="local-contact">
-                            <a href="https://wa.me/51939665548" class="btn-whatsapp" target="_blank">
-                                <i class="fab fa-whatsapp"></i> 939 665 548
+                        </address>
+                        <nav class="local-contact">
+                            <a href="https://wa.me/51939665548" class="btn-whatsapp" target="_blank" rel="noopener">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                </svg> 939 665 548
                             </a>
                             <a href="tel:+51939665548" class="btn-phone">
-                                <i class="fas fa-phone"></i> Llamar
+                                 <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg> Llamar
                             </a>
-                        </div>
-                        <div class="local-features">
-                            <span><i class="fas fa-check"></i> Zona segura</span>
-                            <span><i class="fas fa-check"></i> Delivery</span>
-                            <span><i class="fas fa-check"></i> Pedidos personalizados</span>
-                        </div>
-                    </div>
-                    <div class="local-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.0!2d-79.8394!3d-6.7714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDYnMTcuMCJTIDc5wrA1MCcyMS44Ilc!5e0!3m2!1ses!2spe!4v1234567890" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
+                        </nav>
+                        <ul class="local-features">
+                            <li>☑️ Zona segura</li>
+                            <li>☑️ Delivery</li>
+                            <li>☑️ Pedidos personalizados</li>
+                        </ul>
+                    </section>
+                    <figure class="local-map">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.0737047362604!2d-79.86014602629167!3d-6.760867366109444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904ceee8aa92a441%3A0xa1f27150f9268205!2sPari%C3%B1as%20899%2C%20Chiclayo%2014009!5e0!3m2!1ses-419!2spe!4v1767738571738!5m2!1ses-419!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de Sede San Isidro"></iframe>
+                    </figure>
                 </div>
-            </div>
+            </article>
 
             <!-- Local 3 -->
-            <div class="local-detail">
+            <article class="local-detail">
                 <div class="local-content">
-                    <div class="local-info">
-                        <div class="local-number">03</div>
+                    <section class="local-info">
+                        <span class="local-number">03</span>
                         <h3>Sede La Victoria</h3>
-                        <div class="local-address">
-                            <i class="fas fa-map-marker-alt"></i>
+                        <address class="local-address">
+                             <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                             </svg>
                             <p>Amautas 2148 - La Victoria, Chiclayo</p>
-                        </div>
-                        <div class="local-contact">
-                            <a href="https://wa.me/51914906183" class="btn-whatsapp" target="_blank">
-                                <i class="fab fa-whatsapp"></i> 914 906 183
+                        </address>
+                        <nav class="local-contact">
+                            <a href="https://wa.me/51914906183" class="btn-whatsapp" target="_blank" rel="noopener">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                </svg> 914 906 183
                             </a>
                             <a href="tel:+51914906183" class="btn-phone">
-                                <i class="fas fa-phone"></i> Llamar
+                                 <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg> Llamar
                             </a>
-                        </div>
-                        <div class="local-features">
-                            <span><i class="fas fa-check"></i> Amplio local</span>
-                            <span><i class="fas fa-check"></i> Delivery</span>
-                            <span><i class="fas fa-check"></i> Pedidos personalizados</span>
-                        </div>
-                    </div>
-                    <div class="local-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.0!2d-79.8394!3d-6.7714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDYnMTcuMCJTIDc5wrA1MCcyMS44Ilc!5e0!3m2!1ses!2spe!4v1234567890" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
+                        </nav>
+                        <ul class="local-features">
+                            <li>☑️ Amplio local</li>
+                            <li>☑️ Delivery</li>
+                            <li>☑️ Pedidos personalizados</li>
+                        </ul>
+                    </section>
+                    <figure class="local-map">
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.7776488477416!2d-79.85134083203812!3d-6.796885551418498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cef414db4431d%3A0x9a4d84871c5ea67d!2sPasteleria%20Fina%20Mi%20Perla!5e0!3m2!1ses-419!2spe!4v1767738260099!5m2!1ses-419!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de Sede La Victoria"></iframe>
+                    </figure>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -434,32 +524,37 @@ ul {
             <h2>Horarios de Atención</h2>
             <p class="subtitle">Todas nuestras sucursales comparten los mismos horarios</p>
             <div class="horarios-grid">
-                <div class="horario-card">
-                    <div class="horario-icon">
-                        <i class="fas fa-calendar-week"></i>
-                    </div>
+                <article class="horario-card">
+                    <figure class="horario-icon">
+                         <svg class="icon-svg-large" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/>
+                         </svg>
+                    </figure>
                     <h3>Lunes - Jueves</h3>
                     <p class="time">7:00 AM - 10:00 PM</p>
-                </div>
-                <div class="horario-card">
-                    <div class="horario-icon">
-                        <i class="fas fa-calendar-check"></i>
-                    </div>
+                </article>
+                <article class="horario-card">
+                    <figure class="horario-icon">
+                        <svg class="icon-svg-large" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/>
+                         </svg>
+                    </figure>
                     <h3>Viernes - Sábado</h3>
                     <p class="time">7:00 AM - 9:00 PM</p>
-                </div>
-                <div class="horario-card">
-                    <div class="horario-icon">
-                        <i class="fas fa-calendar-day"></i>
-                    </div>
+                </article>
+                <article class="horario-card">
+                    <figure class="horario-icon">
+                         <svg class="icon-svg-large" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/>
+                         </svg>
+                    </figure>
                     <h3>Domingo</h3>
                     <p class="time">7:00 AM - 8:00 PM</p>
-                </div>
+                </article>
             </div>
-            <div class="horarios-note">
-                <i class="fas fa-info-circle"></i>
-                <p>Atención especial en días festivos. Consulta nuestras redes sociales para horarios especiales.</p>
-            </div>
+            <aside class="horarios-note">
+                <p>⚠️ Atención especial en días festivos. Consulta nuestras redes sociales para horarios especiales.</p>
+            </aside>
         </div>
     </section>
 
@@ -470,53 +565,78 @@ ul {
                 <h2>¿Necesitas hacer un pedido?</h2>
                 <p>Contáctanos por WhatsApp desde cualquiera de nuestras sucursales</p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/51985556216" class="btn btn-whatsapp" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Sede Pedro Ruiz
+                    <a href="https://wa.me/51985556216" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg> Sede Pedro Ruiz
                     </a>
-                    <a href="https://wa.me/51939665548" class="btn btn-whatsapp" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Sede San Isidro
+                    <a href="https://wa.me/51939665548" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>Sede San Isidro
                     </a>
-                    <a href="https://wa.me/51914906183" class="btn btn-whatsapp" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Sede La Victoria
+                    <a href="https://wa.me/51914906183" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg> Sede La Victoria
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+        <!-- Footer -->
+    <footer class="footer" id="contacto">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <div class="footer-logo">
-                        <img src="images/logo-pasteleria-miperla-chiclayo.webp" alt="Pasteleria fina mi perla en chiclayo">
+                        <img src="images/logo-pasteleria-miperla-chiclayo.png" 
+                             alt="Pasteleria fina mi perla en chiclayo" 
+                             width="150" 
+                             height="150"
+                             loading="lazy"
+                             decoding="async">
                         <h3>Mi Perla</h3>
                     </div>
                     <p class="footer-description">Líder en Pastelería Fina</p>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/tortamiperla" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/pasteleriamiperla/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/51985556216" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                       <a href="https://www.facebook.com/tortamiperla" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/pasteleriamiperla/" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/51985556216" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h4>Contact Center</h4>
                     <ul class="footer-links">
                         <li>
-                            <i class="fab fa-whatsapp"></i>
+                            <img src="/images/WhatsApp_icon.png" alt="" width="25" height="25">
                             <a href="https://wa.me/51985556216">985 556 216</a>
                         </li>
                         <li>
-                            <i class="fab fa-whatsapp"></i>
+                            <img src="/images/WhatsApp_icon.png" alt="" width="25" height="25">
                             <a href="https://wa.me/51939665548">939 665 548</a>
                         </li>
                         <li>
-                            <i class="fab fa-whatsapp"></i>
+                            <img src="/images/WhatsApp_icon.png" alt="" width="25" height="25">
                             <a href="https://wa.me/51914906183">914 906 183</a>
                         </li>
                         <li>
-                            <i class="fas fa-envelope"></i>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
                             <a href="mailto:pasteleriamiperla@gmail.com">pasteleriamiperla@gmail.com</a>
                         </li>
                     </ul>
@@ -528,12 +648,6 @@ ul {
                         <li><a href="cobertura.html">Cobertura</a></li>
                         <li><a href="productos.html">Nuestros Productos</a></li>
                     </ul>
-                     <div class="footer-hours">
-                        <h5>Horario de Atención</h5>
-                        <p>Lunes a Jueves de 7am a 10pm</p>
-                        <p>Viernes- Sábado  7am - 9pm</p>
-                        <p>Domingo de 7am-8pm</p>
-                    </div>
                 </div>
                 <div class="footer-column">
                     <h4>Servicio al Cliente</h4>
@@ -541,19 +655,26 @@ ul {
                         <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
                         <li><a href="politica-cookies.html">Política de Cookies</a></li>
                     </ul>
+                    <div class="footer-hours">
+                        <h5>Horario de Atención</h5>
+                        <p>Lunes a Jueves de 7am a 10pm</p>
+                        <p>Viernes- Sábado  7am - 9pm</p>
+                        <p>Domingo de 7am-8pm</p>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Pastelería Mi Perla. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Pastelería Mi Perla. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Flotante -->
-    <a href="https://wa.me/51985556216" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <a href="https://wa.me/51985556216" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+       <img src="/images/WhatsApp_icon.png" alt="" width="30" height="30">
     </a>
 
-    <script src="js/main.js"></script>
+    <!-- JavaScript con defer para no bloquear renderizado -->
+    <script defer src="js/main.js?v=1.5"></script>
 </body>
 </html>

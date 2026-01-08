@@ -170,7 +170,7 @@ document.querySelectorAll('a[href^="https://wa.me"]').forEach(link => {
 // ===========================
 const createScrollButton = () => {
     const button = document.createElement('button');
-    button.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    button.innerHTML = button.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 14l5-5 5 5z"/></svg>';; // Flecha simple;
     button.className = 'scroll-to-top';
     button.style.cssText = `
         position: fixed;

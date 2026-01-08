@@ -1,101 +1,170 @@
 /* ===========================
-   Locales Page
+   SECCIONES BASE
    =========================== */
-.locales-intro {
-    text-align: center;
-    margin-bottom: 4rem;
+.locales-section,
+.horarios-section,
+.cta-section {
+    width: 100%;
+    padding: 3rem 0;
 }
 
+.locales-section {
+    background: var(--white);
+}
+
+.horarios-section {
+    background: var(--light-gray);
+}
+
+.cta-section {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+}
+
+/* ===========================
+   LOCAL DETAIL - Estructura simplificada
+   =========================== */
 .local-detail {
     margin-bottom: 4rem;
 }
 
+.local-detail:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Mobile: 1 columna vertical */
 .local-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
 }
 
-.local-content.reverse {
-    direction: rtl;
-}
-
-.local-content.reverse > * {
-    direction: ltr;
-}
-
+/* ===========================
+   LOCAL INFO - Card de información
+   =========================== */
 .local-info {
     background: var(--white);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px var(--shadow);
 }
 
 .local-number {
-    width: 60px;
-    height: 60px;
-    background:var(--primary-color);
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
     color: var(--white);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .local-info h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--dark-color);
 }
 
+/* ===========================
+   DIRECCIÓN
+   =========================== */
 .local-address {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
-.local-address i {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    margin-top: 3px;
+.local-address p {
+    color: var(--gray);
+    line-height: 1.5;
 }
 
+/* ===========================
+   CONTACTO - Botones
+   =========================== */
 .local-contact {
     display: flex;
-    gap: 1rem;
+    gap: 0.8rem;
     margin-bottom: 1.5rem;
     flex-wrap: wrap;
 }
 
+.btn-whatsapp,
+.btn-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-whatsapp {
+    background:#0ccf26;;
+    color: var(--white);
+}
+
+.btn-phone {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+
+/* ===========================
+   CARACTERÍSTICAS
+   =========================== */
 .local-features {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.6rem;
 }
 
 .local-features span {
-    display: flex;
-    align-items: center;
-    gap: 8px;
     color: var(--gray);
+    font-size: 0.95rem;
 }
 
-.local-features i {
-    color: #25D366;
-}
-
-.local-map iframe {
+/* ===========================
+   MAPA - Responsive con Aspect Ratio
+   =========================== */
+.local-map {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* Aspect ratio 4:3 */
+    height: 0;
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 5px 15px var(--shadow);
 }
 
-.horarios-section {
-    background: var(--light-gray);
+.local-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* ===========================
+   HORARIOS - Sección
+   =========================== */
+.horarios-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
 }
 
 .horarios-section .subtitle {
@@ -104,120 +173,114 @@
     color: var(--gray);
 }
 
+/* Mobile: 1 columna */
 .horarios-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .horario-card {
     background: var(--white);
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 5px 15px var(--shadow);
+    transition: var(--transition);
+}
+
+.horario-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .horario-icon {
-    width: 70px;
-    height: 70px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1rem;
-}
-
-.horario-icon i {
-    font-size: 2rem;
-    color: var(--white);
 }
 
 .horario-card h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     color: var(--dark-color);
+    font-size: 1.3rem;
 }
 
 .horario-card .time {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--primary-color);
 }
 
+/* ===========================
+   NOTA DE HORARIOS
+   =========================== */
 .horarios-note {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
     background: var(--white);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px var(--shadow);
-}
-
-.horarios-note i {
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-}
-
-/* ===========================
-   CTA Section
-   =========================== */
-.cta-section {
-   background:var(--primary-color) ;
-    color: var(--white);
-    padding: 100px 0 60px;
     text-align: center;
 }
 
+.horarios-note p {
+    color: var(--gray);
+    margin: 0;
+}
+
+/* ===========================
+   CTA SECTION
+   =========================== */
 .cta-content h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
 .cta-content p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
+    opacity: 0.95;
 }
 
 .cta-buttons {
     display: flex;
+    flex-direction: column;
     gap: 1rem;
+    align-items: center;
+}
+
+.cta-buttons .btn-whatsapp {
+    width: 100%;
+    max-width: 300px;
     justify-content: center;
-    flex-wrap: wrap;
+    padding: 1rem;
+    font-size: 1rem;
+    background:  #0ccf26;
 }
-.btn-whatsapp {
-    background: #0ccf26;
-    color: var(--white);
-    display: inline-block;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 10px;
-}
-
-
-.btn-whatsapp-large {
-    padding: 15px 40px;
-    font-size: 1.1rem;
-    background: #25D366;
-    color: var(--white);
-}
-
 /* ===========================
-   Footer
+   FOOTER
    =========================== */
 .footer {
     background: #4A3628;
     color: var(--white);
-    padding: 60px 0 20px;
 }
 
+/* Mobile: 1 columna */
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
+}
+
+.footer-column h4 {
+    color: var(--auxiliar-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
 .footer-logo {
@@ -229,10 +292,13 @@
 
 .footer-logo img {
     width: 150px;
+    height: 150px;
+        
 }
 
 .footer-logo h3 {
     color: var(--auxiliar-color);
+    font-size: 1.5rem;
 }
 
 .footer-description {
@@ -248,7 +314,7 @@
 .social-links a {
     width: 40px;
     height: 40px;
-    background: rgba(255,255,255,0.1);
+    background: var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -257,17 +323,19 @@
 }
 
 .social-links a:hover {
-    background: var(--primary-color);
-    transform: translateY(-3px);
+    background: var(--secondary-color);
+    transform: scale(1.1);
 }
 
-.footer-column h4 {
-    color: var(--auxiliar-color);
-    margin-bottom: 1rem;
+.footer-links {
+    list-style: none;
 }
 
 .footer-links li {
     margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .footer-links a {
@@ -275,6 +343,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    transition: var(--transition);
 }
 
 .footer-links a:hover {
@@ -293,34 +362,142 @@
     margin-bottom: 0.5rem;
 }
 
+.footer-hours p {
+    color: #CCC;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid rgba(255,255,255,0.1);
     color: #AAA;
-}
-/* ===========================
-   WhatsApp Flotante
-   =========================== */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background: #25D366;
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    z-index: 999;
-    animation: pulse 2s infinite;
+    font-size: 0.9rem;
 }
 
-.whatsapp-float:hover {
-    background: #1EBE57;
-    transform: scale(1.1);
+/* ===========================
+   TABLET - 768px+
+   =========================== */
+@media (min-width: 768px) {
+    /* Locales en 2 columnas */
+    .local-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    /* Invertir orden en desktop */
+    .local-content.reverse {
+        direction: rtl;
+    }
+
+    .local-content.reverse > * {
+        direction: ltr;
+    }
+
+    .local-info {
+        padding: 2rem;
+    }
+
+    .local-number {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .local-info h3 {
+        font-size: 1.8rem;
+    }
+
+    /* Horarios en 3 columnas */
+    .horarios-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    /* CTA buttons en fila */
+    .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .cta-buttons .btn-whatsapp {
+        width: auto;
+        min-width: 200px;
+    }
+
+    .cta-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .cta-content p {
+        font-size: 1.2rem;
+    }
+
+    /* Footer en grid */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  .footer-logo img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* ===========================
+   DESKTOP - 1024px+
+   =========================== */
+@media (min-width: 1024px) {
+    .locales-section,
+    .horarios-section,
+    .cta-section {
+        padding: 5rem 0;
+    }
+    .horarios-section h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Mapa con menos padding-bottom en desktop */
+    .local-map {
+        padding-bottom: 60%; /* Aspect ratio 16:10 */
+    }
+
+    /* Footer en 4 columnas */
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer {
+        padding: 4rem 0 2rem;
+    }
+}
+
+/* ===========================
+   ANIMACIONES Y TRANSICIONES
+   =========================== */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Performance - reducir animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }

@@ -3,53 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Preguntas frecuentes sobre nuestros productos y servicios - Pastelería Mi Perla">
+    <meta name="description" content="Preguntas frecuentes sobre nuestros productos y servicios - Pastelería Mi Perla. Encuentra respuestas sobre pedidos, entregas, sabores y más.">
     <meta name="robots" content="index, follow">
     <title>Preguntas Frecuentes - Mi Perla Pastelería</title>
-      <!-- PNG -->
+    
+    <!-- Favicons optimizados -->
     <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-pasteleria-miperla-chiclayo.png">
-     <!-- Apple -->
-    <link rel="canonical" href="https://www.pasteleriamiperla.online/preguntas-frecuentes">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-pasteleria-miperla.png">
-    <link rel="preload" as="image" href="images/logo-pasteleria-miperla-chiclayo.jpg">
-    <link rel="preload" href="/css/frecuentes.css" as="style">
-    <link rel="stylesheet" href="/css/frecuentes.css" media="print" onload="this.media='all'">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload"href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" 
-    as="style">
-   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" 
-  media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-     <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D5CQ5ZEEYX');
-</script>
-     <style>
+    <link rel="canonical" href="https://www.pasteleriamiperla.online/preguntas-frecuentes">
+    
+    <!-- CSS crítico inline -->
+    <style>
 /* ===========================
    Variables y Reset
    =========================== */
 :root {
-    --primary-color: #C41E3A; /* Dorado */
-    --secondary-color: #22c4e0; /* Rojo/Rosado */
-    --auxiliar-color:#e0b506; /* Rojo/Rosado */
-    --dark-color: #2C1810; /* Marrón oscuro */
-    --light-color: #FFF5E6; /* Crema claro */
+    --primary-color: #C41E3A;
+    --secondary-color: #22c4e0;
+    --auxiliar-color: #e0b506;
+    --dark-color: #2C1810;
+    --light-color: #FFF5E6;
     --white: #FFFFFF;
     --gray: #666666;
     --light-gray: #F5F5F5;
     --shadow: rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    --container-width: 1200px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -81,21 +69,38 @@ ul {
     list-style: none;
 }
 
+/* Container consistente */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100%;
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-/* ===========================
-   Header y Navegación
-   =========================== */
+@media (min-width: 768px) {
+    .container {
+       padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+/* Header y Navegación */
 .header {
     background: var(--white);
     box-shadow: 0 2px 10px var(--shadow);
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .nav {
@@ -112,7 +117,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: 'Playfair Display', serif;
     color: var(--primary-color);
     font-weight: 700;
@@ -166,7 +171,6 @@ ul {
     border: none;
     cursor: pointer;
     z-index: 1001;
-    position: relative;
 }
 
 .nav-toggle span {
@@ -177,19 +181,19 @@ ul {
     border-radius: 2px;
 }
 
-/* Animación del menú hamburguesa a X */
 .nav-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(8px, 8px);
 }
 
 .nav-toggle.active span:nth-child(2) {
     opacity: 0;
-    transform: translateX(-20px);
 }
 
 .nav-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
 }
+
+/* Page Header */
 .page-header {
     background: linear-gradient(
         to right,
@@ -199,13 +203,40 @@ ul {
         var(--secondary-color) 100%
     );
     color: var(--white);
-    padding: 100px 0 60px;
+    padding: 100px 20px 60px;
     text-align: center;
+    width: 100%;
 }
 
-/* ===========================
-   Responsive
-   =========================== */
+/* WhatsApp Flotante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 999;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float svg {
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .nav-toggle {
         display: flex;
@@ -228,80 +259,45 @@ ul {
         left: 0;
     }
 
-    .hero-title {
-        font-size: 3rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.5rem;
-    }
-
-    .about-content,
-    .local-content,
-    .pedidos-content {
-        grid-template-columns: 1fr;
-    }
-
-    .about-features {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        font-size: 2rem;
+    .page-header {
+        padding: 20px;
     }
 
     .page-header h1 {
         font-size: 2rem;
     }
-
-    .hero-buttons,
-    .cta-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .local-content.reverse {
-        direction: ltr;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .products-grid,
-    .categorias-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .modal-content {
-        width: 95%;
-        padding: 1rem;
-    }
 }
     </style>
+    
+    <!-- Preload recursos críticos -->
+    <link rel="preload" as="image" href="images/logo-pasteleria-mi-perla.png" fetchpriority="high">
+    <link rel="preload" href="/css/frecuentes.css?v=2.1" as="style">
+    <link rel="stylesheet" href="/css/frecuentes.css?v=2.1" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/css/frecuentes.css?v=2.1"></noscript>
+
+    <!-- Fuentes con font-display swap -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Google Analytics async -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5CQ5ZEEYX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D5CQ5ZEEYX');
+    </script>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="nav">
             <div class="container nav-container">
-                <div class="logo">
-                    <a href="index.html">
-                         <img src="images/logo-pasteleria-miperla-chiclayo.jpg" alt="logo de pasteleria mi perla en chicalyo">
-                         <span> Pasteleria Mi Perla</span>
-                    </a>
-                </div>
+                <a href="index.html" class="logo">
+                    <img src="images/logo-pasteleria-mi-perla.png" alt="logo de pasteleria mi perla en chiclayo" width="150" height="150">
+                    <span>Pasteleria Mi Perla</span>
+                </a>
                 <button class="nav-toggle" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -337,14 +333,18 @@ ul {
             <!-- Pedidos y Entregas -->
             <div class="faq-category">
                 <h3 class="faq-category-title">
-                    <i class="fas fa-shopping-cart"></i>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="#C41E3A">
+                        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                    </svg>
                     Pedidos y Entregas
                 </h3>
                 
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Cómo puedo hacer un pedido?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>Puedes hacer tu pedido de tres formas:</p>
@@ -359,7 +359,9 @@ ul {
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Con cuánta anticipación debo hacer mi pedido?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>Recomendamos hacer los pedidos con la siguiente anticipación:</p>
@@ -375,7 +377,9 @@ ul {
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Realizan entregas a domicilio?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>Sí, realizamos delivery en toda la ciudad de Chiclayo y distritos cercanos. El costo de envío varía según la zona de entrega. Consulta nuestra página de <a href="cobertura.html">Cobertura</a> para más detalles.</p>
@@ -385,7 +389,9 @@ ul {
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Cuál es el horario de entrega?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>Realizamos entregas de lunes a domingo de 10:00 AM a 6:00 PM. Puedes coordinar la hora exacta de entrega al momento de hacer tu pedido.</p>
@@ -396,14 +402,18 @@ ul {
             <!-- Productos -->
             <div class="faq-category">
                 <h3 class="faq-category-title">
-                    <i class="fas fa-birthday-cake"></i>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="#C41E3A">
+                        <path d="M12 6c1.11 0 2-.9 2-2 0-.38-.1-.73-.29-1.03L12 0l-1.71 2.97c-.19.3-.29.65-.29 1.03 0 1.1.9 2 2 2zm4.6 9.99l-1.07-1.07-1.08 1.07c-1.3 1.3-3.58 1.31-4.89 0l-1.07-1.07-1.09 1.07C6.75 16.64 5.88 17 4.96 17c-.73 0-1.4-.23-1.96-.61V21c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-4.61c-.56.38-1.23.61-1.96.61-.92 0-1.79-.36-2.44-1.01zM18 9h-5V7h-2v2H6c-1.66 0-3 1.34-3 3v1.54c0 1.08.88 1.96 1.96 1.96.52 0 1.02-.2 1.38-.57l2.14-2.13 2.13 2.13c.74.74 2.03.74 2.77 0l2.14-2.13 2.13 2.13c.37.37.86.57 1.38.57 1.08 0 1.96-.88 1.96-1.96V12C21 10.34 19.66 9 18 9z"/>
+                    </svg>
                     Sobre Nuestros Productos
                 </h3>
 
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Puedo personalizar mi torta con cualquier diseño?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>¡Sí! Nos especializamos en tortas personalizadas. Puedes enviarnos una imagen de referencia o describirnos tu idea, y nuestros pasteleros la harán realidad. Trabajamos con temas infantiles, corporativos, bodas, y cualquier ocasión especial.</p>
@@ -413,7 +423,9 @@ ul {
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Qué sabores de torta tienen disponibles?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>Ofrecemos una amplia variedad de sabores:</p>
@@ -433,7 +445,9 @@ ul {
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Los bocaditos pueden ser solo dulces, solo salados o mixtos?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>Puedes elegir la combinación que prefieras. Ofrecemos:</p>
@@ -449,7 +463,9 @@ ul {
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Tienen opciones sin gluten o veganas?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>Sí, podemos preparar productos especiales bajo pedido. Es importante que nos informes sobre cualquier restricción alimentaria al momento de hacer tu pedido para garantizar la preparación adecuada.</p>
@@ -460,14 +476,18 @@ ul {
             <!-- Pagos -->
             <div class="faq-category">
                 <h3 class="faq-category-title">
-                    <i class="fas fa-credit-card"></i>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="#C41E3A">
+                        <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                    </svg>
                     Pagos y Facturación
                 </h3>
 
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Qué métodos de pago aceptan?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>Aceptamos los siguientes métodos de pago:</p>
@@ -484,7 +504,9 @@ ul {
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Debo pagar un adelanto?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>Para pedidos personalizados o de eventos grandes, solicitamos un adelanto del 50% para confirmar el pedido. El saldo restante se paga al momento de la entrega o recojo.</p>
@@ -494,7 +516,9 @@ ul {
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Emiten factura o boleta?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>Sí, emitimos tanto boletas como facturas. Solo debes solicitarlo al momento de hacer tu pedido y proporcionar tus datos correspondientes.</p>
@@ -505,14 +529,18 @@ ul {
             <!-- Eventos Especiales -->
             <div class="faq-category">
                 <h3 class="faq-category-title">
-                    <i class="fas fa-calendar-check"></i>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="#C41E3A">
+                        <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/>
+                    </svg>
                     Eventos y Pedidos Especiales
                 </h3>
 
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Atienden eventos corporativos?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>¡Por supuesto! Atendemos eventos corporativos como reuniones, inauguraciones, aniversarios de empresas, y más. Ofrecemos precios especiales para pedidos al por mayor y podemos personalizar los productos con el logo de tu empresa.</p>
@@ -522,7 +550,9 @@ ul {
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Pueden hacer tortas de varios pisos?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>Sí, realizamos tortas de varios pisos para bodas, quinceañeros y eventos especiales. Estos pedidos requieren mayor anticipación (mínimo 1 semana) debido a su complejidad.</p>
@@ -532,7 +562,9 @@ ul {
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Hacen pruebas de sabor?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>Para eventos grandes como bodas o eventos corporativos importantes, podemos coordinar una cata previa. Contáctanos para agendar una cita.</p>
@@ -543,14 +575,18 @@ ul {
             <!-- Otros -->
             <div class="faq-category">
                 <h3 class="faq-category-title">
-                    <i class="fas fa-question-circle"></i>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="#C41E3A">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
                     Otras Preguntas
                 </h3>
 
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Cómo debo conservar mi torta?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>Recomendamos mantener la torta refrigerada hasta el momento de servir. Sácala del refrigerador 30 minutos antes de consumir para que alcance temperatura ambiente y disfrutes mejor su sabor.</p>
@@ -560,7 +596,9 @@ ul {
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Puedo cancelar o modificar mi pedido?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>Las modificaciones deben solicitarse con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas de anticipación no tienen devolución del adelanto, ya que los ingredientes ya han sido preparados.</p>
@@ -570,7 +608,9 @@ ul {
                 <div class="faq-item">
                     <div class="faq-question">
                         <h4>¿Tienen productos disponibles para compra inmediata?</h4>
-                        <i class="fas fa-chevron-down"></i>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C41E3A">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
                     </div>
                     <div class="faq-answer">
                         <p>Sí, en nuestras tiendas siempre tenemos productos disponibles como tortas de vitrina, bocaditos del día, y otros postres que puedes llevar inmediatamente sin necesidad de pedido previo.</p>
@@ -583,49 +623,69 @@ ul {
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <div class="cta-content">
-                <h2>¿No encontraste tu respuesta?</h2>
-                <p>Contáctanos por WhatsApp y con gusto te ayudaremos</p>
-                <a href="https://wa.me/51985556216?text=Hola,%20tengo%20una%20consulta" class="btn btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Escríbenos al WhatsApp
-                </a>
-            </div>
+            <h2>¿No encontraste tu respuesta?</h2>
+            <p>Contáctanos por WhatsApp y con gusto te ayudaremos</p>
+            <a href="https://wa.me/51985556216?text=Hola,%20tengo%20una%20consulta" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Escríbenos al WhatsApp
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="contacto">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <div class="footer-logo">
-                         <img src="images/logo-pasteleria-miperla-chiclayo.webp" alt="Pasteleria fina mi perla en chiclayo">
+                        <img src="/images/logo-pasteleria-miperla-chiclayo.png" 
+                             alt="Pasteleria fina mi perla en chiclayo" 
+                             width="150" 
+                             height="150"
+                             loading="lazy"
+                             decoding="async">
                         <h3>Mi Perla</h3>
                     </div>
                     <p class="footer-description">Líder en Pastelería Fina</p>
-                     <div class="social-links">
-                        <a href="https://www.facebook.com/tortamiperla" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/pasteleriamiperla/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/51985556216" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <div class="social-links">
+                       <a href="https://www.facebook.com/tortamiperla" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/pasteleriamiperla/" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/51985556216" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h4>Contact Center</h4>
                     <ul class="footer-links">
                         <li>
-                            <i class="fab fa-whatsapp"></i>
+                            <img src="/images/WhatsApp_icon.png" alt="" width="25" height="25">
                             <a href="https://wa.me/51985556216">985 556 216</a>
                         </li>
                         <li>
-                            <i class="fab fa-whatsapp"></i>
+                            <img src="/images/WhatsApp_icon.png" alt="" width="25" height="25">
                             <a href="https://wa.me/51939665548">939 665 548</a>
                         </li>
                         <li>
-                            <i class="fab fa-whatsapp"></i>
+                            <img src="/images/WhatsApp_icon.png" alt="" width="25" height="25">
                             <a href="https://wa.me/51914906183">914 906 183</a>
                         </li>
                         <li>
-                            <i class="fas fa-envelope"></i>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
                             <a href="mailto:pasteleriamiperla@gmail.com">pasteleriamiperla@gmail.com</a>
                         </li>
                     </ul>
@@ -637,12 +697,6 @@ ul {
                         <li><a href="cobertura.html">Cobertura</a></li>
                         <li><a href="productos.html">Nuestros Productos</a></li>
                     </ul>
-                      <div class="footer-hours">
-                        <h5>Horario de Atención</h5>
-                        <p>Lunes a Jueves de 7am a 10pm</p>
-                        <p>Viernes- Sábado  7am - 9pm</p>
-                        <p>Domingo de 7am-8pm</p>
-                    </div>
                 </div>
                 <div class="footer-column">
                     <h4>Servicio al Cliente</h4>
@@ -650,20 +704,29 @@ ul {
                         <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
                         <li><a href="politica-cookies.html">Política de Cookies</a></li>
                     </ul>
+                    <div class="footer-hours">
+                        <h5>Horario de Atención</h5>
+                        <p>Lunes a Jueves de 7am a 10pm</p>
+                        <p>Viernes- Sábado  7am - 9pm</p>
+                        <p>Domingo de 7am-8pm</p>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Pastelería Mi Perla. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Pastelería Mi Perla. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Flotante -->
-    <a href="https://wa.me/51985556216" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <a href="https://wa.me/51985556216" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
     </a>
 
-    <script src="js/faq.js"></script>
-    <script src="js/main.js"></script>
+    <!-- JavaScript con defer -->
+    <script defer src="js/faq.js"></script>
+    <script defer src="js/main.js?v=1.5"></script>
 </body>
 </html>

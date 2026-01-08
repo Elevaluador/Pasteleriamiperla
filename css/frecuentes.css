@@ -1,46 +1,91 @@
 /* ===========================
-   FAQ Page
+   CSS OPTIMIZADO - FAQ
+   Mobile First - Accordion Interactivo
+   =========================== */
+
+/* ===========================
+   FAQ SECTION
    =========================== */
 .faq-section {
     background: var(--white);
-    padding: 80px 0;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .faq-section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 }
 
 .faq-intro {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .faq-intro {
+        margin-bottom: 4rem;
+    }
 }
 
 .faq-intro h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--dark-color);
 }
 
+@media (min-width: 768px) {
+    .faq-intro h2 {
+        font-size: 2.5rem;
+    }
+}
+
 .faq-intro p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--gray);
 }
 
+@media (min-width: 768px) {
+    .faq-intro p {
+        font-size: 1.1rem;
+    }
+}
+
+/* ===========================
+   FAQ CATEGORIES
+   =========================== */
 .faq-category {
     margin-bottom: 3rem;
 }
 
 .faq-category-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--dark-color);
     margin-bottom: 2rem;
     padding-bottom: 1rem;
     border-bottom: 3px solid var(--primary-color);
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
-.faq-category-title i {
-    color: var(--primary-color);
+@media (min-width: 768px) {
+    .faq-category-title {
+        font-size: 1.8rem;
+        gap: 15px;
+    }
 }
 
+.faq-category-title svg {
+    flex-shrink: 0;
+}
+
+/* ===========================
+   FAQ ITEMS (ACCORDION)
+   =========================== */
 .faq-item {
     background: var(--white);
     border: 1px solid #E0E0E0;
@@ -55,13 +100,20 @@
 }
 
 .faq-question {
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: var(--light-gray);
     transition: var(--transition);
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .faq-question {
+        padding: 1.5rem;
+    }
 }
 
 .faq-question:hover {
@@ -69,22 +121,43 @@
 }
 
 .faq-question h4 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--dark-color);
     margin: 0;
     flex: 1;
 }
 
-.faq-question i {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    transition: var(--transition);
+@media (min-width: 768px) {
+    .faq-question h4 {
+        font-size: 1.1rem;
+    }
 }
 
-.faq-item.active .faq-question i {
+.faq-question svg {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question svg {
     transform: rotate(180deg);
 }
 
+.faq-item.active .faq-question {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.faq-item.active .faq-question h4 {
+    color: var(--white);
+}
+
+.faq-item.active .faq-question svg {
+    fill: var(--white);
+}
+
+/* ===========================
+   FAQ ANSWERS
+   =========================== */
 .faq-answer {
     max-height: 0;
     overflow: hidden;
@@ -95,6 +168,18 @@
 .faq-answer ul {
     padding: 1.5rem;
     margin: 0;
+    line-height: 1.8;
+}
+
+.faq-answer p {
+    color: var(--dark-color);
+    font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+    .faq-answer p {
+        font-size: 1rem;
+    }
 }
 
 .faq-answer ul {
@@ -105,6 +190,22 @@
 .faq-answer li {
     margin-bottom: 0.8rem;
     position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+    .faq-answer li {
+        font-size: 1rem;
+    }
+}
+
+.faq-answer li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 .faq-answer li strong {
@@ -119,46 +220,120 @@
 .faq-answer a:hover {
     color: var(--secondary-color);
 }
-@media (max-width: 768px) {
-    .faq-category-title {
-        font-size: 1.5rem;
-    }
 
-    .faq-question h4 {
-        font-size: 1rem;
-    }
+/* ===========================
+   CTA SECTION
+   =========================== */
+.cta-section {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
 
-    .politica-section-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .cookie-table {
-        font-size: 0.9rem;
-    }
-
-    .cookie-table th,
-    .cookie-table td {
-        padding: 0.8rem;
-    }
-
-    .browser-controls {
-        grid-template-columns: 1fr;
+@media (min-width: 1024px) {
+    .cta-section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
 }
+
+.cta-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .cta-section h2 {
+        font-size: 2.5rem;
+    }
+}
+
+.cta-section p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+@media (min-width: 768px) {
+    .cta-section p {
+        font-size: 1.2rem;
+    }
+}
+
 /* ===========================
-   Footer
+   BUTTONS
+   =========================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+.btn-whatsapp {
+    background: #0ccf26;
+    color: var(--white);
+}
+
+/* ===========================
+   FOOTER
    =========================== */
 .footer {
     background: #4A3628;
     color: var(--white);
-    padding: 60px 0 20px;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.footer-column h4 {
+    color: var(--auxiliar-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
 .footer-logo {
@@ -170,10 +345,12 @@
 
 .footer-logo img {
     width: 150px;
+    height: 150px;
 }
 
 .footer-logo h3 {
     color: var(--auxiliar-color);
+    font-size: 1.5rem;
 }
 
 .footer-description {
@@ -189,7 +366,7 @@
 .social-links a {
     width: 40px;
     height: 40px;
-    background: rgba(255,255,255,0.1);
+    background: var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -198,17 +375,19 @@
 }
 
 .social-links a:hover {
-    background: var(--primary-color);
-    transform: translateY(-3px);
+    background: var(--secondary-color);
+    transform: scale(1.1);
 }
 
-.footer-column h4 {
-    color: var(--auxiliar-color);
-    margin-bottom: 1rem;
+.footer-links {
+    list-style: none;
 }
 
 .footer-links li {
     margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .footer-links a {
@@ -216,6 +395,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    transition: var(--transition);
 }
 
 .footer-links a:hover {
@@ -234,34 +414,36 @@
     margin-bottom: 0.5rem;
 }
 
+.footer-hours p {
+    color: #CCC;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid rgba(255,255,255,0.1);
     color: #AAA;
-}
-/* ===========================
-   WhatsApp Flotante
-   =========================== */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background: #25D366;
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    z-index: 999;
-    animation: pulse 2s infinite;
+    font-size: 0.9rem;
 }
 
-.whatsapp-float:hover {
-    background: #1EBE57;
-    transform: scale(1.1);
+/* ===========================
+   SMOOTH SCROLL
+   =========================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===========================
+   ACCESIBILIDAD
+   =========================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }

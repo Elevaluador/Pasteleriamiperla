@@ -3,53 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Política de Cookies - Pastelería Mi Perla">
+    <meta name="description" content="Política de Cookies - Pastelería Mi Perla. Información sobre el uso de cookies en nuestro sitio web.">
     <meta name="robots" content="noindex, nofollow">
     <title>Política de Cookies - Mi Perla Pastelería</title>
-      <!-- PNG -->
+    
+    <!-- Favicons optimizados -->
     <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-pasteleria-miperla-chiclayo.png">
-     <!-- Apple -->
-    <link rel="canonical" href="https://www.pasteleriamiperla.online/politica-cookies">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-pasteleria-miperla.png">
-    <link rel="preload" as="image" href="images/logo-pasteleria-miperla-chiclayo.jpg">
-    <link rel="preload" href="/css/cookies.css" as="style">
-    <link rel="stylesheet" href="/css/cookies.css" media="print" onload="this.media='all'">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload"href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" 
-    as="style">
-   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" 
-  media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D5CQ5ZEEYX');
-</script>
+    <link rel="canonical" href="https://www.pasteleriamiperla.online/politica-cookies">
+    
+    <!-- CSS crítico inline -->
     <style>
 /* ===========================
    Variables y Reset
    =========================== */
 :root {
-    --primary-color: #C41E3A; /* Dorado */
-    --secondary-color: #22c4e0; /* Rojo/Rosado */
-    --auxiliar-color:#e0b506; /* Rojo/Rosado */
-    --dark-color: #2C1810; /* Marrón oscuro */
-    --light-color: #FFF5E6; /* Crema claro */
+    --primary-color: #C41E3A;
+    --secondary-color: #22c4e0;
+    --auxiliar-color: #e0b506;
+    --dark-color: #2C1810;
+    --light-color: #FFF5E6;
     --white: #FFFFFF;
     --gray: #666666;
     --light-gray: #F5F5F5;
     --shadow: rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    --container-width: 1200px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -81,21 +69,38 @@ ul {
     list-style: none;
 }
 
+/* Container consistente */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100%;
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-/* ===========================
-   Header y Navegación
-   =========================== */
+@media (min-width: 768px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+/* Header y Navegación */
 .header {
     background: var(--white);
     box-shadow: 0 2px 10px var(--shadow);
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .nav {
@@ -112,7 +117,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: 'Playfair Display', serif;
     color: var(--primary-color);
     font-weight: 700;
@@ -166,7 +171,6 @@ ul {
     border: none;
     cursor: pointer;
     z-index: 1001;
-    position: relative;
 }
 
 .nav-toggle span {
@@ -177,19 +181,19 @@ ul {
     border-radius: 2px;
 }
 
-/* Animación del menú hamburguesa a X */
 .nav-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(8px, 8px);
 }
 
 .nav-toggle.active span:nth-child(2) {
     opacity: 0;
-    transform: translateX(-20px);
 }
 
 .nav-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
 }
+
+/* Page Header */
 .page-header {
     background: linear-gradient(
         to right,
@@ -199,13 +203,40 @@ ul {
         var(--secondary-color) 100%
     );
     color: var(--white);
-    padding: 100px 0 60px;
+    padding: 100px 20px 60px;
     text-align: center;
+    width: 100%;
 }
 
-/* ===========================
-   Responsive
-   =========================== */
+/* WhatsApp Flotante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 999;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float svg {
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .nav-toggle {
         display: flex;
@@ -228,80 +259,45 @@ ul {
         left: 0;
     }
 
-    .hero-title {
-        font-size: 3rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.5rem;
-    }
-
-    .about-content,
-    .local-content,
-    .pedidos-content {
-        grid-template-columns: 1fr;
-    }
-
-    .about-features {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        font-size: 2rem;
+    .page-header {
+        padding: 80px 15px 40px;
     }
 
     .page-header h1 {
         font-size: 2rem;
     }
-
-    .hero-buttons,
-    .cta-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .local-content.reverse {
-        direction: ltr;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .products-grid,
-    .categorias-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .modal-content {
-        width: 95%;
-        padding: 1rem;
-    }
 }
     </style>
+    
+    <!-- Preload recursos críticos -->
+    <link rel="preload" as="image" href="images/logo-pasteleria-mi-perla.png" fetchpriority="high">
+    <link rel="preload" href="/css/cookies.css?v=2.0" as="style">
+    <link rel="stylesheet" href="/css/cookies.css?v=2.0" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/css/cookies.css?v=2.0"></noscript>
+
+    <!-- Fuentes con font-display swap -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Google Analytics async -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5CQ5ZEEYX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D5CQ5ZEEYX');
+    </script>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="nav">
             <div class="container nav-container">
-                <div class="logo">
-                    <a href="index.html">
-                         <img src="images/logo-pasteleria-miperla-chiclayo.jpg" alt="logo de pasteleria mi perla en chicalyo">
-                         <span> Pasteleria Mi Perla</span>
-                    </a>
-                </div>
+                <a href="index.html" class="logo">
+                    <img src="images/logo-pasteleria-mi-perla.png" alt="logo de pasteleria mi perla en chiclayo" width="150" height="150">
+                    <span>Pasteleria Mi Perla</span>
+                </a>
                 <button class="nav-toggle" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -336,12 +332,22 @@ ul {
                 </div>
 
                 <div class="politica-section-content">
-                    <h2><i class="fas fa-cookie-bite"></i> ¿Qué son las cookies?</h2>
+                    <h2>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                        </svg>
+                        ¿Qué son las cookies?
+                    </h2>
                     <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo (ordenador, tablet o móvil) cuando visitas un sitio web. Estas cookies permiten que el sitio web recuerde tus acciones y preferencias durante un período de tiempo, por lo que no tienes que volver a configurarlas cada vez que regresas al sitio.</p>
                 </div>
 
                 <div class="politica-section-content">
-                    <h2><i class="fas fa-list-check"></i> ¿Qué tipos de cookies utilizamos?</h2>
+                    <h2>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
+                        </svg>
+                        ¿Qué tipos de cookies utilizamos?
+                    </h2>
                     
                     <h3>1. Cookies Esenciales</h3>
                     <p>Estas cookies son necesarias para que el sitio web funcione correctamente. Sin ellas, algunos servicios no estarán disponibles.</p>
@@ -423,17 +429,47 @@ ul {
                 </div>
 
                 <div class="politica-section-content">
-                    <h2><i class="fas fa-bullseye"></i> ¿Para qué utilizamos las cookies?</h2>
+                    <h2>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        ¿Para qué utilizamos las cookies?
+                    </h2>
                     <ul class="politica-list">
-                        <li><i class="fas fa-check-circle"></i> <strong>Funcionalidad del sitio:</strong> Para que el sitio web funcione correctamente y puedas navegar sin problemas.</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Recordar tus preferencias:</strong> Como tu sucursal más cercana o productos favoritos.</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Mejorar nuestros servicios:</strong> Analizando cómo usas el sitio para mejorarlo continuamente.</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Seguridad:</strong> Protegiendo tu información y nuestro sitio de actividades fraudulentas.</li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <strong>Funcionalidad del sitio:</strong> Para que el sitio web funcione correctamente y puedas navegar sin problemas.
+                        </li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <strong>Recordar tus preferencias:</strong> Como tu sucursal más cercana o productos favoritos.
+                        </li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <strong>Mejorar nuestros servicios:</strong> Analizando cómo usas el sitio para mejorarlo continuamente.
+                        </li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <strong>Seguridad:</strong> Protegiendo tu información y nuestro sitio de actividades fraudulentas.
+                        </li>
                     </ul>
                 </div>
 
                 <div class="politica-section-content">
-                    <h2><i class="fas fa-shield-alt"></i> Cookies de terceros</h2>
+                    <h2>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                        </svg>
+                        Cookies de terceros
+                    </h2>
                     <p>Algunos servicios de terceros que utilizamos también pueden colocar cookies en tu dispositivo:</p>
                     
                     <h3>Google Analytics</h3>
@@ -445,71 +481,110 @@ ul {
                 </div>
 
                 <div class="politica-section-content">
-                    <h2><i class="fas fa-sliders-h"></i> ¿Cómo puedes controlar las cookies?</h2>
+                    <h2>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/>
+                        </svg>
+                        ¿Cómo puedes controlar las cookies?
+                    </h2>
                     
                     <h3>En tu navegador</h3>
                     <p>La mayoría de los navegadores aceptan cookies automáticamente, pero puedes modificar la configuración de tu navegador para rechazarlas si lo prefieres:</p>
                     
                     <div class="browser-controls">
                         <div class="browser-item">
-                            <i class="fab fa-chrome"></i>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="10" fill="#4285F4"/>
+                                <circle cx="12" cy="12" r="7" fill="#34A853"/>
+                                <circle cx="12" cy="12" r="4" fill="#FBBC05"/>
+                                <circle cx="12" cy="12" r="2" fill="#EA4335"/>
+                            </svg>
                             <h4>Google Chrome</h4>
                             <p>Configuración → Privacidad y seguridad → Cookies y otros datos de sitios</p>
                         </div>
                         <div class="browser-item">
-                            <i class="fab fa-firefox-browser"></i>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="#FF7139"/>
+                            </svg>
                             <h4>Mozilla Firefox</h4>
                             <p>Opciones → Privacidad y seguridad → Cookies y datos del sitio</p>
                         </div>
                         <div class="browser-item">
-                            <i class="fab fa-safari"></i>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="#006CFF"/>
+                            </svg>
                             <h4>Safari</h4>
                             <p>Preferencias → Privacidad → Gestionar datos del sitio web</p>
                         </div>
                         <div class="browser-item">
-                            <i class="fab fa-edge"></i>
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="#0078D7"/>
+                            </svg>
                             <h4>Microsoft Edge</h4>
                             <p>Configuración → Privacidad, búsqueda y servicios → Cookies</p>
                         </div>
                     </div>
 
                     <div class="warning-box">
-                        <i class="fas fa-exclamation-triangle"></i>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="#FFC107">
+                            <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                        </svg>
                         <p><strong>Importante:</strong> Ten en cuenta que deshabilitar las cookies puede afectar la funcionalidad de nuestro sitio web y limitar tu experiencia de navegación.</p>
                     </div>
                 </div>
 
                 <div class="politica-section-content">
-                    <h2><i class="fas fa-user-shield"></i> Tu privacidad</h2>
+                    <h2>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                        </svg>
+                        Tu privacidad
+                    </h2>
                     <p>En Pastelería Mi Perla, respetamos tu privacidad. Las cookies que utilizamos no recopilan información personal identificable sin tu consentimiento explícito. Nunca vendemos ni compartimos tu información personal con terceros para fines de marketing.</p>
                 </div>
 
                 <div class="politica-section-content">
-                    <h2><i class="fas fa-sync-alt"></i> Actualizaciones de esta política</h2>
+                    <h2>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/>
+                        </svg>
+                        Actualizaciones de esta política
+                    </h2>
                     <p>Podemos actualizar esta Política de Cookies periódicamente para reflejar cambios en las cookies que utilizamos o por otras razones operativas, legales o regulatorias. Te recomendamos revisar esta página regularmente para estar informado sobre cómo utilizamos las cookies.</p>
                 </div>
 
                 <div class="politica-section-content">
-                    <h2><i class="fas fa-envelope"></i> Contacto</h2>
+                    <h2>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        Contacto
+                    </h2>
                     <p>Si tienes preguntas sobre nuestra Política de Cookies o sobre cómo manejamos tus datos, no dudes en contactarnos:</p>
                     
                     <div class="contact-info-box">
                         <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
                             <div>
                                 <strong>Email:</strong>
                                 <p><a href="mailto:pasteleriamiperla@gmail.com">pasteleriamiperla@gmail.com</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fab fa-whatsapp"></i>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
                             <div>
                                 <strong>WhatsApp:</strong>
                                 <p><a href="https://wa.me/51985556216">985 556 216</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
                             <div>
                                 <strong>Dirección:</strong>
                                 <p>Av. Pedro Ruiz 890, Chiclayo - Lambayeque</p>
@@ -519,7 +594,12 @@ ul {
                 </div>
 
                 <div class="consent-section">
-                    <h2><i class="fas fa-check-circle"></i> Consentimiento</h2>
+                    <h2>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="#25D366">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Consentimiento
+                    </h2>
                     <p>Al utilizar nuestro sitio web, aceptas el uso de cookies de acuerdo con esta Política de Cookies. Si no estás de acuerdo con el uso de cookies, puedes deshabilitarlas en la configuración de tu navegador, aunque esto puede afectar tu experiencia en el sitio.</p>
                 </div>
             </div>
@@ -527,38 +607,57 @@ ul {
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="contacto">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <div class="footer-logo">
-                         <img src="images/logo-pasteleria-miperla-chiclayo.webp" alt="Pasteleria fina mi perla en chiclayo">
+                        <img src="images/logo-pasteleria-miperla-chiclayo.png" 
+                             alt="Pasteleria fina mi perla en chiclayo" 
+                             width="80" 
+                             height="80"
+                             loading="lazy"
+                             decoding="async">
                         <h3>Mi Perla</h3>
                     </div>
                     <p class="footer-description">Líder en Pastelería Fina</p>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/tortamiperla" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/pasteleriamiperla/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/51985556216" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                       <a href="https://www.facebook.com/tortamiperla" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/pasteleriamiperla/" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/51985556216" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h4>Contact Center</h4>
                     <ul class="footer-links">
                         <li>
-                            <i class="fab fa-whatsapp"></i>
+                            <img src="/images/WhatsApp_icon.png" alt="" width="25" height="25">
                             <a href="https://wa.me/51985556216">985 556 216</a>
                         </li>
                         <li>
-                            <i class="fab fa-whatsapp"></i>
+                            <img src="/images/WhatsApp_icon.png" alt="" width="25" height="25">
                             <a href="https://wa.me/51939665548">939 665 548</a>
                         </li>
                         <li>
-                            <i class="fab fa-whatsapp"></i>
+                            <img src="/images/WhatsApp_icon.png" alt="" width="25" height="25">
                             <a href="https://wa.me/51914906183">914 906 183</a>
                         </li>
                         <li>
-                            <i class="fas fa-envelope"></i>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
                             <a href="mailto:pasteleriamiperla@gmail.com">pasteleriamiperla@gmail.com</a>
                         </li>
                     </ul>
@@ -570,12 +669,6 @@ ul {
                         <li><a href="cobertura.html">Cobertura</a></li>
                         <li><a href="productos.html">Nuestros Productos</a></li>
                     </ul>
-                     <div class="footer-hours">
-                        <h5>Horario de Atención</h5>
-                        <p>Lunes a Jueves de 7am a 10pm</p>
-                        <p>Viernes- Sábado  7am - 9pm</p>
-                        <p>Domingo de 7am-8pm</p>
-                    </div>
                 </div>
                 <div class="footer-column">
                     <h4>Servicio al Cliente</h4>
@@ -583,19 +676,28 @@ ul {
                         <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
                         <li><a href="politica-cookies.html">Política de Cookies</a></li>
                     </ul>
+                    <div class="footer-hours">
+                        <h5>Horario de Atención</h5>
+                        <p>Lunes a Jueves de 7am a 10pm</p>
+                        <p>Viernes- Sábado  7am - 9pm</p>
+                        <p>Domingo de 7am-8pm</p>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Pastelería Mi Perla. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Pastelería Mi Perla. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Flotante -->
-    <a href="https://wa.me/51985556216" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <a href="https://wa.me/51985556216" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
     </a>
 
-    <script src="js/main.js"></script>
+    <!-- JavaScript con defer -->
+    <script defer src="js/main.js?v=1.5"></script>
 </body>
 </html>

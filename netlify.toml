@@ -67,7 +67,7 @@
 # categorias de productos
 [[redirects]]
   from = "/productos/tortas.html"
-  to = "/tortas"
+  to = "/productos/tortas"
   status = 301
   force = true
 [[redirects]]

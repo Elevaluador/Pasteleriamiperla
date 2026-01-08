@@ -1,121 +1,11 @@
-
-/* ===========================
-   Hero Section
-   =========================== */
-.hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('../images/fondo-hero-home.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--white);
-    position: relative;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(196, 30, 58, 0.3));
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    animation: fadeInUp 1s ease;
-}
-
-.hero-title {
-    font-size: 5rem;
-    margin-bottom: 1rem;
-    color: var(--auxiliar-color);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.hero-subtitle {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--white);
-}
-
-.hero-description {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: var(--light-color);
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.hero-scroll {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    z-index: 2;
-    animation: bounce 2s infinite;
-}
-
-/* ===========================
-   Botones
-   =========================== */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-    border: none;
-    font-size: 1rem;
-}
-
-.btn-primary {
-    background: var(--auxiliar-color);
-    color: var(--dark-color);
-}
-
-.btn-primary:hover {
-    background: #C5A028;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: var(--white);
-    border: 2px solid var(--white);
-}
-
-.btn-secondary:hover {
-    background: var(--white);
-    color: var(--dark-color);
-}
-
+/*botones*/
 .btn-whatsapp {
     background: #0ccf26;
     color: var(--white);
-    display: inline-block;
     padding: 5px;
     margin: 5px;
     border-radius: 10px;
 }
-
 
 .btn-whatsapp-large {
     padding: 15px 40px;
@@ -149,14 +39,14 @@
 }
 
 /* ===========================
-   Secciones
+   Secciones (Mobile First)
    =========================== */
 section {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 1rem;
     color: var(--dark-color);
@@ -165,32 +55,11 @@ section {
 .section-subtitle {
     text-align: center;
     color: var(--gray);
-    margin-bottom: 3rem;
-    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
 }
-
-.page-header {
-    background: linear-gradient(
-        to right,
-        var(--primary-color) 0%,
-        var(--primary-color) 40%,
-        var(--secondary-color) 60%,
-        var(--secondary-color) 100%
-    );
-    color: var(--white);
-    padding: 100px 0 60px;
-    text-align: center;
-}
-
-
-
-.page-header h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
 /* ===========================
-   About Section
+   About Section (Mobile First)
    =========================== */
 .about {
     background: var(--light-gray);
@@ -198,27 +67,27 @@ section {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     align-items: center;
 }
 
 .about-text h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
     color: var(--dark-color);
 }
 
 .about-text p {
     margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.8;
 }
 
 .about-features {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
@@ -240,10 +109,13 @@ section {
 .about-image img {
     border-radius: 10px;
     box-shadow: 0 10px 30px var(--shadow);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* ===========================
-   Productos Destacados
+   Productos Destacados (Mobile First) - OPTIMIZADO
    =========================== */
 .featured-products {
     background: var(--white);
@@ -251,7 +123,7 @@ section {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
 }
 
@@ -270,15 +142,19 @@ section {
 
 .product-image {
     position: relative;
-    height: 350px;
     overflow: hidden;
+    width: 100%;
+    padding-bottom: 100%; /* Aspect ratio 1:1 */
 }
 
-.product-image img {
+.product-image img,
+.product-image picture {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: var(--transition);
 }
 
 .product-card:hover .product-image img {
@@ -297,6 +173,7 @@ section {
     justify-content: center;
     opacity: 0;
     transition: var(--transition);
+    z-index: 2;
 }
 
 .product-card:hover .product-overlay {
@@ -308,13 +185,13 @@ section {
 }
 
 .product-info h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
     color: var(--dark-color);
 }
 
 /* ===========================
-   Locations
+   Locations (Mobile First)
    =========================== */
 .locations {
     background: var(--light-gray);
@@ -322,7 +199,7 @@ section {
 
 .locations-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -341,21 +218,10 @@ section {
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.location-icon {
-    width: 60px;
-    height: 60px;
-    background: var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1rem;
+.icono-ubicacion {
+    color:var(--light-color)
 }
 
-.location-icon i {
-    font-size: 1.5rem;
-    color: var(--white);
-}
 
 .location-card h3 {
     margin-bottom: 1rem;
@@ -394,7 +260,7 @@ section {
 
 .hours-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
 }
 
@@ -421,22 +287,22 @@ section {
 }
 
 /* ===========================
-   CTA Section
+   CTA Section (Mobile First)
    =========================== */
 .cta-section {
-   background:var(--primary-color) ;
+    background: var(--primary-color);
     color: var(--white);
-    padding: 100px 0 60px;
+    padding: 60px 0;
     text-align: center;
 }
 
 .cta-content h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 .cta-content p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -445,10 +311,11 @@ section {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 /* ===========================
-   Footer
+   Footer (Mobile First)
    =========================== */
 .footer {
     background: #4A3628;
@@ -458,7 +325,7 @@ section {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -472,6 +339,7 @@ section {
 
 .footer-logo img {
     width: 150px;
+    height: auto;
 }
 
 .footer-logo h3 {
@@ -491,7 +359,7 @@ section {
 .social-links a {
     width: 40px;
     height: 40px;
-    background: rgba(255,255,255,0.1);
+    background: var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -499,10 +367,6 @@ section {
     transition: var(--transition);
 }
 
-.social-links a:hover {
-    background: var(--primary-color);
-    transform: translateY(-3px);
-}
 
 .footer-column h4 {
     color: var(--auxiliar-color);
@@ -511,6 +375,10 @@ section {
 
 .footer-links li {
     margin-bottom: 0.8rem;
+ margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    gap:5px;
 }
 
 .footer-links a {
@@ -518,11 +386,6 @@ section {
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-.footer-links a:hover {
-    color: var(--primary-color);
-    padding-left: 5px;
 }
 
 .footer-hours {
@@ -541,32 +404,6 @@ section {
     padding-top: 2rem;
     border-top: 1px solid rgba(255,255,255,0.1);
     color: #AAA;
-}
-
-/* ===========================
-   WhatsApp Flotante
-   =========================== */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background: #25D366;
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    z-index: 999;
-    animation: pulse 2s infinite;
-}
-
-.whatsapp-float:hover {
-    background: #1EBE57;
-    transform: scale(1.1);
 }
 
 /* ===========================
@@ -615,5 +452,118 @@ section {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* ===========================
+   Media Queries - Tablet (min-width: 481px)
+   =========================== */
+@media (min-width: 481px) {
+   
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .locations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-logo img {
+        width: 120px;
+    }
+}
+
+/* ===========================
+   Media Queries - Desktop (min-width: 769px)
+   =========================== */
+@media (min-width: 769px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+    }
+
+    /* About Section Desktop */
+    .about-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+
+    .about-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-text p {
+        font-size: 1.1rem;
+    }
+
+    .about-features {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    /* Products Desktop */
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-info h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Locations Desktop */
+    .locations-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hours-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* CTA Desktop */
+    .cta-section {
+        padding: 100px 0 60px;
+    }
+
+    .cta-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .cta-content p {
+        font-size: 1.2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: row;
+    }
+
+    /* Footer Desktop */
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-logo img {
+        width: 150px;
+    }
+}
+
+/* ===========================
+   Optimizaciones de rendimiento
+   =========================== */
+/* Reducir motion para usuarios con preferencias de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
