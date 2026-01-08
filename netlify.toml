@@ -46,9 +46,9 @@
   force = true
 
    [[redirects]]
-  from = "/productos.html"
-  to = "/productos-pasteleria-miperla"
-  status = 301
+  from = "/productos-pasteleria-miperla"
+  to = "/productos.html"
+  status = 200
   force = true
 
 # paginas de servicios
@@ -66,9 +66,9 @@
 
 # categorias de productos
 [[redirects]]
-  from = "/productos/tortas.html"
-  to = "/productos/tortas"
-  status = 301
+  from = "/productos/tortas"
+  to = "productos/tortas.html"
+  status = 200
   force = true
 [[redirects]]
   from = "/productos/bocaditos.html"
